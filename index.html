@@ -168,6 +168,7 @@
   }
   .proof-card:hover{ background:var(--ink-2); }
   .proof-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .proof-index{ font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--muted); margin-bottom:8px; }
   .proof-card h3{ font-size:21px; color:var(--paper); margin-top:4px; }
   .proof-role{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--brass); margin-top:6px; letter-spacing:0.02em; }
   .proof-card p.desc{ color:var(--muted); font-size:14.5px; margin-top:12px; }
@@ -181,6 +182,11 @@
   .proof-sub-item h4{ font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:15px; color:var(--paper); }
   .proof-sub-item p{ color:var(--muted); font-size:13.5px; margin-top:6px; }
   .proof-sub-item .metrics{ margin-top:10px; }
+
+
+  .proof-card p strong{ color:var(--paper); font-weight:600; }
+  .proof-card p.desc{ line-height:1.65; }
+  .case-note{ margin-top:16px; padding:12px 14px; border-left:2px solid var(--brass); background:rgba(47,75,196,.04); font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); }
 
   /* BUILDS */
   .build-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -213,6 +219,15 @@
   .about-text p{ margin-top:18px; }
   .about-text p:first-child{ margin-top:0; }
   .about-text strong{ color:var(--paper); font-weight:500; }
+
+  /* TRACK RECORD */
+  .track-band{ background:var(--console-bg); }
+  .track-band .eyebrow{ color:var(--console-muted); }
+  .track-band .eyebrow::before{ color:var(--console-muted); }
+  .track-list{ display:flex; flex-direction:column; gap:14px; max-width:720px; }
+  .track-row{ display:flex; gap:20px; align-items:baseline; }
+  .track-tag{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--signal); width:96px; flex-shrink:0; }
+  .track-row p{ color:var(--console-text); font-size:14px; margin:0; }
 
   /* HOW I THINK */
   .think-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -274,10 +289,10 @@
     <div class="nav-name"><span class="dot"></span> BUNMI SIJUWADE // FIELD STATUS: LIVE</div>
     <nav class="nav-links">
       <a href="#about">About</a>
-      <a href="#building">Now Building</a>
-      <a href="#work">Selected Work</a>
-      <a href="#think">How I Think</a>
-      <a href="#skills">Skills</a>
+      <a href="#building">AI Product Lab</a>
+      <a href="#work">Already Shipped</a>
+      <a href="#think">Principles</a>
+      <a href="#skills">Toolkit</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -287,11 +302,11 @@
   <div class="wrap">
     <div class="hero-head">
       <div class="eyebrow">Product · AI · Creative Technology</div>
-      <h1>Building where AI, creativity, and product <em>meet.</em></h1>
+      <h1>I build AI products that help people <em>understand, decide, and create.</em></h1>
     </div>
     <div class="hero-row">
       <div>
-        <p class="hero-sub">I design intelligent digital experiences, prototype AI-powered workflows, and lead teams that turn emerging technology into products people actually use.</p>
+        <p class="hero-sub">Senior product leader and creative technologist with 12+ years shipping enterprise platforms and customer experiences. Now I am applying that experience to AI-native products that combine intelligent systems, thoughtful design, and real-world impact.</p>
         <div class="hero-meta">
           <div>Based in <span>Brooklyn, NY</span></div>
           <div>MPS <span>NYU Tisch ITP</span></div>
@@ -313,12 +328,25 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">About</div>
-      <h2>From enterprise delivery to AI-native product.</h2>
+      <h2>Enterprise product leadership, with a builder’s mindset.</h2>
     </div>
     <div class="about-text reveal">
       <p>I've built digital products for global brands including <strong>Alexander Wang, Kiehl's, L'Oréal, Estée Lauder Companies, and Ezra Coaching</strong>.</p>
-      <p>That work taught me how to run enterprise delivery: discovery, roadmaps, cross-functional teams, measurable outcomes. Lately I've been putting that same discipline toward something new, prototyping and building AI-native products myself, end to end.</p>
-      <p>Whether I'm leading a client team or building on my own, I keep coming back to the same question: how can technology make creativity, and the people behind it, more powerful?</p>
+      <p>I have led discovery, roadmaps, platform integrations, global launches, and cross-functional delivery across commerce, SaaS, data, and customer experience. My work sits between business strategy, design, and engineering: translating ambiguous goals into clear product decisions and shipped outcomes.</p>
+      <p>Alongside enterprise work, I build AI-native prototypes myself to stay close to the technology. That combination—senior product judgment plus hands-on experimentation—is the perspective I bring to teams exploring what AI can make possible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="track-band">
+  <div class="wrap">
+    <div class="eyebrow">Track record</div>
+    <div class="track-list" style="margin-top:20px;">
+      <div class="track-row"><span class="track-tag">ELC</span><p>Global release governance across 260+ sites, plus the promotions engine rebuild</p></div>
+      <div class="track-row"><span class="track-tag">L'Oréal/Kiehl's</span><p>Supported a 40+ market SFCC transformation, delivered an AI skin diagnostic, and strengthened the PIM/DAM foundation behind global product content</p></div>
+      <div class="track-row"><span class="track-tag">Ezra</span><p>Optimized client, coach, and admin products; built a shared design system</p></div>
+      <div class="track-row"><span class="track-tag">Wang</span><p>Led global DTC and omnichannel initiatives spanning AI search, personalization, China commerce, loyalty, fulfillment, and high-volume sales events</p></div>
+      <div class="track-row"><span class="track-tag">now</span><p>Building MatchMyStyle, Somna, and MemoryCube across commerce, sleep intelligence, and creative technology</p></div>
     </div>
   </div>
 </section>
@@ -326,9 +354,9 @@
 <section id="building">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Now building</div>
-      <h2>Where I go to experiment.</h2>
-      <p>Skill-building in public: real code, real state, nothing dressed up as further along than it is.</p>
+      <div class="eyebrow">AI Product Lab</div>
+      <h2>Learning by building in public.</h2>
+      <p>Each project explores a different application of AI—from commerce and sleep intelligence to storytelling and creative technology. Real code, real progress, and nothing presented as further along than it is.</p>
     </div>
     <div class="build-list reveal">
 
@@ -352,13 +380,18 @@
       <div class="build">
         <div class="build-row">
         <div>
-          <h3>StyleGenius</h3>
-          <div class="build-stack">Gemini Live API (concept)</div>
-          <div style="margin-top:14px;"><span class="status concept"><span class="dot"></span>Concept</span></div>
+          <h3>Somna</h3>
+          <div class="build-stack">Sleep intelligence · Wearable data · Agentic workflows</div>
+          <div style="margin-top:14px;"><span class="status building"><span class="dot"></span>Building</span></div>
+          <div class="build-stack" style="margin-top:8px;">Current focus: narcolepsy and fragmented sleep</div>
         </div>
-        <p class="desc">A voice and vision AI styling assistant concept, exploring what a live, conversational stylist could feel like. A concept only, not yet built.</p>
+        <p class="desc">A sleep-awareness platform designed to help people understand patterns hidden in their wearable data. Somna goes beyond total hours slept to examine fragmentation, awakenings, sleep onset, REM continuity, and the longest uninterrupted sleep run—then turns those patterns into clear, non-diagnostic insights and questions users can bring to their healthcare providers.</p>
         <div class="build-progress">
-          <div class="prog-row"><span class="pending">→ stage</span><span>Concept and feasibility exploration</span></div>
+          <div class="prog-row"><span class="ok">✓ done</span><span>Product vision and initial problem framing</span></div>
+          <div class="prog-row"><span class="ok">✓ done</span><span>First-pass data-layer architecture</span></div>
+          <div class="prog-row"><span class="pending">→ now</span><span>Sleep-stage ingestion and normalization</span></div>
+          <div class="prog-row"><span class="pending">→ next</span><span>Fragmentation metrics and trend detection</span></div>
+          <div class="prog-row"><span class="pending">→ later</span><span>Morning brief and clinician-ready summaries</span></div>
         </div>
         </div>
       </div>
@@ -395,13 +428,14 @@
 <section id="work">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Selected work</div>
-      <h2>Enterprise delivery, told as stories.</h2>
-      <p>Not concepts. Commerce experiences that went live and moved the metrics that mattered to the business.</p>
+      <div class="eyebrow">Already shipped</div>
+      <h2>Selected product case studies.</h2>
+      <p>A closer look at the product problems, decisions, systems, and cross-functional delivery behind the work.</p>
     </div>
     <div class="proof-grid reveal">
 
       <div class="proof-card">
+        <div class="proof-index">01</div>
         <div class="proof-top">
           <div>
             <h3>AI Diagnostics & Data Infrastructure</h3>
@@ -412,20 +446,19 @@
         <div class="proof-sub">
           <div class="proof-sub-item">
             <h4>AI-Powered Beauty Diagnostics</h4>
-            <p>Led U.S. delivery of an AI-powered skin diagnostic experience embedded into the product discovery flow.</p>
-            <div class="metrics">
-              <div class="metric"><div class="num">+32%</div><div class="lbl">Conversion rate</div></div>
-              <div class="metric"><div class="num">$1.2M</div><div class="lbl">Revenue impact</div></div>
-            </div>
+            <p><strong>Challenge:</strong> Translate computer-vision skin analysis into a customer experience that felt useful, credible, and connected to commerce.</p>
+            <p><strong>My role:</strong> Led U.S. product delivery for ModiFace Instant Skin Reader, coordinating product mapping, routine logic, UX requirements, legal review, analytics, and launch readiness.</p>
+            <p><strong>Outcome:</strong> Shipped an AI-assisted discovery journey that connected skin concerns to recommended Kiehl’s products and routines.</p>
           </div>
           <div class="proof-sub-item">
             <h4>Building the Data Backbone for Syndication</h4>
-            <p>Ran PIM/DAM implementation workshops with brand and cross-functional teams: data cleanup, approval workflows, catalog import, and enrichment for syndication across multiple channels.</p>
+            <p><strong>Challenge:</strong> Product content was distributed across systems and markets, making consistency and launch readiness difficult.<br><br><strong>My role:</strong> Supported OPERA DAM and Salsify PIM workflows, including taxonomy, metadata, catalog imports, approvals, enrichment, and syndication requirements across global teams.<br><br><strong>Outcome:</strong> Helped establish a more scalable product-content backbone for digital channels and market launches.</p>
           </div>
         </div>
       </div>
 
       <div class="proof-card">
+        <div class="proof-index">02</div>
         <div class="proof-top">
           <div>
             <h3>Reimagining Search for Luxury Commerce</h3>
@@ -433,14 +466,15 @@
           </div>
           <span class="status shipped"><span class="dot"></span>Shipped</span>
         </div>
-        <p class="desc">Rebuilt on-site search relevance with AI-driven ranking, cutting dead-end searches sitewide.</p>
+        <p class="desc"><strong>Challenge:</strong> Luxury customers were encountering weak relevance, merchandising gaps, and dead-end searches.<br><br><strong>My role:</strong> Led the XGen AI search implementation across product, engineering, eCommerce, and merchandising. Defined requirements for ranking, synonyms, redirects, zero-result handling, analytics validation, and launch QA.<br><br><strong>Outcome:</strong> Improved product discovery and created a stronger operating model for continuously tuning search performance.</p>
         <div class="metrics">
-          <div class="metric"><div class="num">+28%</div><div class="lbl">Conversion rate</div></div>
-          <div class="metric"><div class="num">-42%</div><div class="lbl">Zero-result rate</div></div>
+          <div class="metric"><div class="num">AI</div><div class="lbl">Search ranking</div></div>
+          <div class="metric"><div class="num">Global</div><div class="lbl">DTC experience</div></div>
         </div>
       </div>
 
       <div class="proof-card">
+        <div class="proof-index">03</div>
         <div class="proof-top">
           <div>
             <h3>Building Intelligent Loyalty</h3>
@@ -448,14 +482,15 @@
           </div>
           <span class="status shipped"><span class="dot"></span>Shipped</span>
         </div>
-        <p class="desc">Owned the launch of a tiered loyalty program from concept through enrollment at scale.</p>
+        <p class="desc"><strong>Challenge:</strong> Create a connected loyalty experience spanning eCommerce, stores, customer identity, and VIP engagement.<br><br><strong>My role:</strong> Defined the customer journey and integration requirements across SFCC, Teamwork POS/OMS, ActionIQ, Okta, and a Cuseum-powered digital wallet with QR-based identification.<br><br><strong>Outcome:</strong> Established the product and systems foundation for cross-channel recognition, enrollment, and personalized engagement.</p>
         <div class="metrics">
-          <div class="metric"><div class="num">$2.4M</div><div class="lbl">Revenue</div></div>
-          <div class="metric"><div class="num">10,000+</div><div class="lbl">Members</div></div>
+          <div class="metric"><div class="num">4</div><div class="lbl">Core platforms</div></div>
+          <div class="metric"><div class="num">Omnichannel</div><div class="lbl">Customer identity</div></div>
         </div>
       </div>
 
       <div class="proof-card">
+        <div class="proof-index">04</div>
         <div class="proof-top">
           <div>
             <h3>A Vault Sale, Reimagined</h3>
@@ -463,14 +498,15 @@
           </div>
           <span class="status shipped"><span class="dot"></span>Shipped</span>
         </div>
-        <p class="desc">Planned and executed a high-volume flash sale event across the DTC channel.</p>
+        <p class="desc"><strong>Challenge:</strong> Deliver a high-volume, time-bound sale without compromising inventory accuracy, checkout stability, or operational readiness.<br><br><strong>My role:</strong> Coordinated merchandising, pricing, inventory, engineering, operations, customer care, analytics, and launch governance across the DTC stack.<br><br><strong>Outcome:</strong> The 48-hour sale delivered 115% year-over-year growth and was implemented 20% faster than the prior event.</p>
         <div class="metrics">
-          <div class="metric"><div class="num">$3.1M</div><div class="lbl">Revenue</div></div>
           <div class="metric"><div class="num">+115%</div><div class="lbl">YoY growth</div></div>
+          <div class="metric"><div class="num">20%</div><div class="lbl">Faster delivery</div></div>
         </div>
       </div>
 
       <div class="proof-card">
+        <div class="proof-index">05</div>
         <div class="proof-top">
           <div>
             <h3>Optimizing Across Client, Coach & Admin</h3>
@@ -478,13 +514,14 @@
           </div>
           <span class="status shipped"><span class="dot"></span>Shipped</span>
         </div>
-        <p class="desc">Led optimization work across all three products (client, coach, and admin), including a redesigned path from signup to first coaching session, and worked with the team to build a shared design system across the suite.</p>
+        <p class="desc"><strong>Challenge:</strong> Reduce friction across a connected B2B2C ecosystem serving enterprise clients, coaches, and participants.<br><br><strong>My role:</strong> As the first product manager, led roadmap and delivery across client, coach, and admin products. Improved onboarding, coach matching, scheduling, communications, and shared UI patterns.<br><br><strong>Outcome:</strong> Reduced time to first coaching session by 35% and helped establish a shared design system across the product suite.</p>
         <div class="metrics">
           <div class="metric"><div class="num">-35%</div><div class="lbl">Time to first session</div></div>
         </div>
       </div>
 
       <div class="proof-card">
+        <div class="proof-index">06</div>
         <div class="proof-top">
           <div>
             <h3>Global Release &amp; Internal Tooling</h3>
@@ -495,7 +532,7 @@
         <div class="proof-sub">
           <div class="proof-sub-item">
             <h4>Running Global Release, at Scale</h4>
-            <p>Ran release governance across a portfolio of brand sites, with cross-border compliance included via ESW's duty and tax data contracts.</p>
+            <p>Led release governance, QA coordination, UAT readiness, and issue triage across a large global portfolio of brand sites.</p>
             <div class="metrics">
               <div class="metric"><div class="num">260+</div><div class="lbl">Sites</div></div>
               <div class="metric"><div class="num">30+</div><div class="lbl">Brands</div></div>
@@ -504,7 +541,7 @@
           </div>
           <div class="proof-sub-item">
             <h4>Rebuilding the Promotions Engine</h4>
-            <p>Built the redesigned internal promotions application, from prototype through delivery, plus other internal tools and DevOps work supporting the platform teams relied on.</p>
+            <p>Helped redesign and deliver an internal promotions platform used by global brand teams, while also supporting access management, internal tooling, automated testing, and early DevOps enablement research.</p>
           </div>
         </div>
       </div>
@@ -516,8 +553,8 @@
 <section id="think">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">How I think</div>
-      <h2>The approach behind the work.</h2>
+      <div class="eyebrow">Principles</div>
+      <h2>What guides the work.</h2>
     </div>
     <div class="think-grid reveal">
       <div class="think-card">
@@ -525,8 +562,8 @@
         <p>MemoryCube went from thesis concept to a shipped, competition-ready build in weeks, not quarters.</p>
       </div>
       <div class="think-card">
-        <h4>AI First</h4>
-        <p>At Kiehl's, that meant embedding an AI skin diagnostic into product discovery itself, not bolting it on after.</p>
+        <h4>AI With Purpose</h4>
+        <p>AI earns its place when it improves a real decision or experience. At Kiehl’s, the diagnostic connected skin analysis directly to product discovery and routines.</p>
       </div>
       <div class="think-card">
         <h4>Human Centered</h4>
@@ -543,9 +580,9 @@
 <section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Skills</div>
-      <h2>What's in the toolkit.</h2>
-      <p>Platform depth from a decade-plus inside enterprise commerce stacks, plus what's currently being added.</p>
+      <div class="eyebrow">Technical Playground</div>
+      <h2>Enterprise depth, modern AI practice.</h2>
+      <p>A decade-plus inside complex digital platforms, paired with hands-on experimentation across multimodal AI, agentic workflows, rapid prototyping, and product evaluation.</p>
     </div>
     <div class="kit-groups reveal">
       <div class="kit-group">
@@ -564,15 +601,20 @@
           <span class="tag">Rapid Prototyping</span>
           <span class="tag">AI Product Concepting</span>
           <span class="tag">Prompt Design</span>
+          <span class="tag">Experience Prototyping</span>
+          <span class="tag">Conversation Design</span>
         </div>
       </div>
       <div class="kit-group">
-        <h4>AI &amp; Data</h4>
+        <h4>AI Product &amp; Data</h4>
         <div class="kit-tags">
           <span class="tag">Claude API</span>
           <span class="tag">LLM Integration</span>
+          <span class="tag">AI Evaluation</span>
+          <span class="tag">Human-in-the-Loop</span>
           <span class="tag">RAG (in progress)</span>
-          <span class="tag">Agentic Protocols: MCP, A2A, AP2</span>
+          <span class="tag">Agentic Workflows</span>
+          <span class="tag">MCP &amp; A2A</span>
         </div>
       </div>
       <div class="kit-group">
@@ -600,15 +642,15 @@
 <footer id="contact">
   <div class="wrap footer-grid reveal">
     <div>
-      <h2>Let's build<br>what's <em>next.</em></h2>
-      <p class="about-text" style="margin-top:18px; max-width:420px;">I'm interested in work where AI, product strategy, and creative technology intersect to create new customer experiences.</p>
+      <h2>Get in <em>touch.</em></h2>
+      <p class="about-text" style="margin-top:18px; max-width:420px;">I’m exploring senior product, AI product, innovation, and creative technology roles where strategy and hands-on experimentation belong in the same room.</p>
       <a class="btn-resume" href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener">Resume / LinkedIn ↗</a>
     </div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener">LinkedIn: @bunmi-sijuwade</a>
       <a href="mailto:bunmi007@gmail.com">Email: bunmi007@gmail.com</a>
       <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener">GitHub: @BunmiSijuwade</a>
-      <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener">Substack: AI × Fashion</a>
+      <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener">Substack: AI Across Industries</a>
     </div>
   </div>
   <div class="wrap foot-note">Bunmi Sijuwade, Brooklyn, NY, MPS NYU Tisch ITP</div>
