@@ -165,14 +165,12 @@ details.mini .body{margin-top:14px;padding-top:14px;border-top:1px solid var(--l
 @media (prefers-reduced-motion:reduce){.cube{animation:none}}
 
 /* Toolkit */
-.tk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.tk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
 .tk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
 .tk h4{font-size:15px;font-weight:600;margin-bottom:4px}
 .tk p{font-size:13px;color:var(--muted);margin-bottom:16px}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
 .chips span{font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
-.tk.explore{border-style:dashed}
-.tk.explore .chips span{background:transparent;border-style:dashed;color:#33437A}
 .principles{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .pr h5{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:6px}
 .pr p{font-size:14px;color:var(--muted)}
@@ -183,7 +181,7 @@ details.mini .body{margin-top:14px;padding-top:14px;border-top:1px solid var(--l
 .contact h2{font-size:clamp(44px,6vw,72px)}
 .contact h2 em{color:var(--cobalt-soft)}
 .contact .lede{color:rgba(255,255,255,.72)}
-.contact-links{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line-dark)}
+.contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line-dark)}
 .contact-links a{padding:22px 20px 22px 0;text-decoration:none;display:block}
 .contact-links a+a{padding-left:20px;border-left:1px solid var(--line-dark)}
 .contact-links small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt-soft)}
@@ -199,8 +197,8 @@ footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;j
   .stat:nth-child(3){border-left:0;padding-left:0}
   .more-grid,.tk-grid{grid-template-columns:1fr}
   .principles{grid-template-columns:1fr 1fr}
-  .contact-links{grid-template-columns:1fr 1fr}
-  .contact-links a:nth-child(3){border-left:0;padding-left:0}
+  .contact-links{grid-template-columns:1fr}
+  .contact-links a+a{border-left:0;padding-left:0;border-top:1px solid var(--line-dark)}
   .case{padding:28px;gap:28px}
 }
 @media (max-width:640px){
@@ -226,8 +224,7 @@ footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;j
       <a href="#work">Selected Work</a>
       <a href="#products">AI Products</a>
       <a href="#toolkit">Toolkit</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.pdf" class="pill" download>Résumé</a>
+      <a href="#contact" class="pill">Contact</a>
     </div>
   </div>
 </nav>
@@ -241,12 +238,11 @@ footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;j
       <p class="intro">13+ years leading enterprise product for Alexander Wang, Kiehl's, L'Oréal, Estée Lauder and Ezra Coaching. Now I build AI products myself, so the product judgment and the technology stay in the same room.</p>
       <div class="actions">
         <a href="#work" class="btn btn-primary">View selected work ↓</a>
-        <a href="resume.pdf" class="btn btn-ghost" download>Download résumé</a>
+        <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
       </div>
       <div class="meta">
         <span>Brooklyn, NY</span>
         <span>MPS, NYU Tisch ITP</span>
-        <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
@@ -491,16 +487,9 @@ footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;j
       </div>
       <div class="tk">
         <h4>AI in shipped products</h4>
-        <p>Used in products that are live</p>
+        <p>Used in my live products</p>
         <div class="chips">
-          <span>Claude API</span><span>Google Gemini</span><span>LLM integration</span><span>Prompt design</span><span>Supabase</span><span>Three.js</span><span>Lovable</span><span>Rapid prototyping</span>
-        </div>
-      </div>
-      <div class="tk explore">
-        <h4>Currently exploring</h4>
-        <p>Building skills, not yet in shipped work</p>
-        <div class="chips">
-          <span>RAG</span><span>Agentic workflows</span><span>MCP & A2A</span><span>AI evaluation</span><span>Human-in-the-loop</span>
+          <span>Claude API</span><span>Google Gemini</span><span>LLM integration</span><span>Prompt design</span><span>Supabase</span><span>Three.js</span><span>Lovable</span><span>Rapid prototyping</span><span>Human-in-the-loop</span>
         </div>
       </div>
     </div>
@@ -523,7 +512,6 @@ footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;j
 
     <div class="contact-links">
       <a href="mailto:bunmi007@gmail.com"><small>Email</small><span>bunmi007@gmail.com</span></a>
-      <a href="resume.pdf" download><small>Résumé</small><span>Download PDF ↓</span></a>
       <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener"><small>LinkedIn</small><span>@bunmi-sijuwade ↗</span></a>
       <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener"><small>Substack</small><span>AI Across Industries ↗</span></a>
     </div>
