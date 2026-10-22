@@ -1,527 +1,575 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bunmi Sijuwade | Product Leader, Digital Commerce & AI</title>
-<meta name="description" content="Senior product leader with 13+ years shipping global commerce platforms for Alexander Wang, Kiehl's, L'Oréal, Estée Lauder and Ezra. Now building AI products hands-on.">
+<title>Bunmi Sijuwade Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+/* Layout: a commerce "stack" — customer-facing AI on top, data and platforms underneath; every case is placed on that stack */
 :root{
-  --navy:#0A1530;
-  --navy-2:#11214A;
-  --cobalt:#2D5BFF;
-  --cobalt-soft:#8FA8FF;
-  --paper:#F6F4EF;
-  --card:#FFFFFF;
-  --ink:#0E1A33;
-  --muted:#5A6478;
-  --line:#E2DED5;
-  --line-dark:rgba(255,255,255,.12);
-  --serif:'Instrument Serif',Georgia,serif;
-  --sans:'Inter',system-ui,-apple-system,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,monospace;
-  --max:1160px;
+  --bg:#F2F2F0; --surface:#FFFFFF; --sunk:#E6E6E3; --ink:#141414; --muted:#5E5E5A; --line:#D4D4D0;
+  --accent:#8A1C2E; --accent-soft:#F4E3E5; --ai:#8A1C2E; --ai-soft:#F4E3E5; --good:#2F7A3E;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121212; --surface:#1C1C1C; --sunk:#262626; --ink:#EDEDEA; --muted:#A2A29C; --line:#333331;
+  --accent:#E38C99; --accent-soft:#3A1F24; --ai:#E38C99; --ai-soft:#3A1F24; --good:#7CCB8A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121212; --surface:#1C1C1C; --sunk:#262626; --ink:#EDEDEA; --muted:#A2A29C; --line:#333331;
+  --accent:#E38C99; --accent-soft:#3A1F24; --ai:#E38C99; --ai-soft:#3A1F24; --good:#7CCB8A; color-scheme:dark}
+
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;margin:0}
 a{color:inherit}
-img{max-width:100%;display:block}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt)}
-h1,h2,h3{font-weight:400}
-h2{font-family:var(--serif);font-size:clamp(34px,4.4vw,52px);line-height:1.05;letter-spacing:-.01em;margin:10px 0 14px}
-h2 em,h1 em{font-style:italic;color:var(--cobalt)}
-.lede{color:var(--muted);max-width:640px;font-size:17px}
-section{padding:96px 0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.12}
+h1{font-size:clamp(2.3rem,5.2vw,4rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+h3{font-size:1.5rem}
+p{margin:0}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono)}
 
-/* Nav */
-nav{position:sticky;top:0;z-index:50;background:rgba(10,21,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--serif);font-size:22px;color:#fff;text-decoration:none}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px}
-.nav-links a:hover{color:#fff}
-.nav-links .pill{border:1px solid rgba(255,255,255,.3);padding:7px 14px;border-radius:999px;color:#fff}
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-size:1.15rem;text-decoration:none}
+nav.links{display:flex;gap:22px;flex-wrap:wrap}
+nav.links a{text-decoration:none;font-size:.9rem;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+@media (max-width:640px){nav.links{display:none}}
+.hdr-cta{padding:8px 14px;font-size:.85rem;white-space:nowrap}
+header.top nav.links{margin-left:auto}
+@media (max-width:380px){.brand{font-size:1rem}.hdr-cta{padding:7px 11px;font-size:.78rem}}
 
-/* Hero */
-.hero{background:var(--navy);color:#fff;padding:88px 0 0;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 85% 10%,rgba(45,91,255,.28),transparent 60%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
-.hero h1{font-family:var(--serif);font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-.015em;margin:16px 0 22px}
-.hero h1 em{color:var(--cobalt-soft)}
-.hero p.intro{font-size:18px;color:rgba(255,255,255,.78);max-width:540px}
-.hero .eyebrow{color:var(--cobalt-soft)}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 22px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s,background .15s}
+/* hero */
+.hero{padding-block:64px 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:1.15rem;color:var(--muted);max-width:56ch;margin-top:22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--cobalt);color:#fff}
-.btn-primary:hover{background:#4670ff}
-.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-.meta{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.55)}
-.meta a{text-decoration:none}
-.meta a:hover{color:#fff}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-size:.88rem;color:var(--muted)}
 
-/* Product frame (hero + lab) */
-.frame{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1)}
-.frame-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#EEF0F5;border-bottom:1px solid #DDE1EA}
-.frame-bar i{width:10px;height:10px;border-radius:50%;background:#CDD2DD;display:block}
-.frame-bar span{margin-left:10px;font-family:var(--mono);font-size:11px;color:#6B7385}
-.frame-body{position:relative;aspect-ratio:16/11;background:#F7F8FB}
-.frame-body img{width:100%;height:100%;object-fit:cover;object-position:top}
-.frame-caption{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:13px;color:rgba(255,255,255,.6)}
-.frame-caption a{color:var(--cobalt-soft);text-decoration:none;font-weight:500}
+/* stack map */
+.stack{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px}
+.stack-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:4px}
+.layer{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center}
+.layer .label{font-size:.64rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);text-decoration:none;white-space:nowrap}
+a.chip:hover{border-color:var(--ink)}
+.chip.ai{background:var(--ai-soft);border-color:transparent;color:var(--ai);font-weight:600}
+.chip.data{background:var(--ink);border-color:transparent;color:var(--bg);font-weight:600}
+.flow{height:14px;margin-left:108px;border-left:1px dashed var(--line)}
+.stack-foot{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding-block:40px 24px}}
+@media (max-width:460px){.layer{grid-template-columns:1fr;gap:6px}.flow{margin-left:12px}}
 
-/* Fallback mock shown until a real screenshot exists */
-.mock{position:absolute;inset:0;padding:22px;display:none;grid-template-columns:.9fr 1.1fr;gap:16px;color:var(--ink)}
-.no-img .mock{display:grid}
-.no-img img{display:none}
-.mock-photo{border-radius:10px;background:linear-gradient(160deg,#D9DEEA,#B9C3DA);position:relative}
-.mock-photo b{position:absolute;border:2px solid var(--cobalt);border-radius:6px;background:rgba(45,91,255,.08)}
-.mock-photo b::after{content:attr(data-l);position:absolute;top:-10px;left:6px;background:var(--cobalt);color:#fff;font:600 9px var(--sans);padding:2px 6px;border-radius:4px}
-.mock-list{display:flex;flex-direction:column;gap:8px}
-.mock-list h4{font:600 13px var(--sans)}
-.mock-list small{font-size:11px;color:var(--muted);margin-top:-6px}
-.mock-item{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #E4E7EF;border-radius:8px;padding:8px}
-.mock-item div{width:38px;height:38px;border-radius:6px;background:#E6E9F2;flex:none}
-.mock-item p{font-size:11px;line-height:1.3}
-.mock-item p span{display:block;color:var(--muted)}
+/* proof */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-block:24px 0}
+.proof div{padding:22px 18px;border-right:1px solid var(--line)}
+.proof div:last-child{border-right:0}
+.proof b{display:block;font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1;font-variant-numeric:tabular-nums}
+.proof span{display:block;font-size:.88rem;margin-top:8px}
+.proof small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+@media (max-width:760px){.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(2){border-right:0}.proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 
-/* Results strip */
-.results{background:var(--navy);color:#fff;padding:64px 0 72px}
-.results-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark)}
-.stat{padding:28px 24px 0 0}
-.stat+.stat{padding-left:24px;border-left:1px solid var(--line-dark)}
-.stat strong{display:block;font-family:var(--serif);font-size:clamp(40px,4.6vw,58px);line-height:1;color:#fff}
-.stat span{display:block;margin-top:10px;font-size:14px;color:rgba(255,255,255,.65);max-width:220px}
-.stat em{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--cobalt-soft);display:block;margin-top:8px}
+/* timeline */
+.path{margin-top:36px}
+.path ol{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:2px solid var(--ink)}
+.path li{padding:14px 14px 0 0;position:relative;min-width:0}
+.path li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ink)}
+.path li.now::before{background:var(--accent);border-color:var(--accent)}
+.path .yr{font-family:var(--mono);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.path b{display:block;font-size:.92rem;margin-top:4px}
+.path span.role{display:block;font-size:.8rem;color:var(--muted);margin-top:2px;line-height:1.4}
+@media (max-width:860px){.path ol{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink);margin-left:6px}.path li{padding:0 0 18px 20px}.path li::before{top:4px;left:-7px}}
+.real-shot{display:block;width:100%;border-radius:8px}
 
-/* Case studies */
-.cases{display:flex;flex-direction:column;gap:28px;margin-top:48px}
-.case{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:40px;display:grid;grid-template-columns:.85fr 1.15fr;gap:48px}
-.case-num{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.case h3{font-family:var(--serif);font-size:34px;line-height:1.1;margin:10px 0 6px}
-.case .org{font-size:14px;color:var(--muted)}
-.case-metric{margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
-.case-metric strong{font-family:var(--serif);font-size:56px;line-height:1;color:var(--cobalt)}
-.case-metric span{display:block;font-size:14px;color:var(--muted);margin-top:6px}
-.case-metric.multi{display:flex;gap:28px;flex-wrap:wrap}
-.case-metric.multi strong{font-size:40px}
-.dtl{display:grid;gap:18px}
-.dtl div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.dtl div:last-child{border-bottom:0;padding-bottom:0}
-.dtl dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt);padding-top:3px}
-.dtl dd{font-size:15.5px}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.tags span{font-size:12px;padding:4px 10px;border-radius:999px;background:#EEF1FB;color:#33437A}
+/* sections */
+section.block{padding-block:72px 24px}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:36px}
+.sec-head p{color:var(--muted);max-width:52ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
 
-/* Additional work */
-.more{margin-top:56px}
-.more h3{font-family:var(--serif);font-size:28px;margin-bottom:18px}
-.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-details.mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-details.mini summary{list-style:none;cursor:pointer}
-details.mini summary::-webkit-details-marker{display:none}
-details.mini .o{font-size:13px;color:var(--muted)}
-details.mini h4{font-size:17px;font-weight:600;margin:4px 0 10px}
-details.mini .hl{font-size:14px}
-details.mini .hl b{color:var(--cobalt);font-weight:600}
-details.mini .toggle{display:inline-block;margin-top:12px;font-size:13px;color:var(--cobalt);font-weight:500}
-details.mini[open] .toggle{display:none}
-details.mini .body{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:#2E3850;display:grid;gap:8px}
+/* case */
+.case{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-block:40px;border-top:1px solid var(--line)}
+.case>*{min-width:0}
+.case:nth-of-type(even) .demo{order:-1}
+.case-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:12px}
+.lane{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.case h3{margin-bottom:14px}
+.case .result{display:flex;flex-wrap:wrap;gap:18px;margin:4px 0 18px}
+.case .result div b{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1;display:block;font-variant-numeric:tabular-nums}
+.case .result div span{font-size:.82rem;color:var(--muted)}
+dl.pdt{display:grid;gap:12px;margin:0}
+dl.pdt div{display:grid;grid-template-columns:90px 1fr;gap:12px}
+dl.pdt dt{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding-top:4px}
+dl.pdt dd{margin:0;font-size:.97rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tags span{font-family:var(--mono);font-size:.7rem;padding:4px 8px;border-radius:6px;background:var(--sunk);color:var(--muted)}
+@media (max-width:900px){.case{grid-template-columns:1fr;gap:24px}.case:nth-of-type(even) .demo{order:0}}
+@media (max-width:460px){dl.pdt div{grid-template-columns:1fr;gap:2px}}
 
-/* AI products */
-.lab{background:var(--navy);color:#fff}
-.lab .lede{color:rgba(255,255,255,.7)}
-.lab .eyebrow{color:var(--cobalt-soft)}
-.lab h2 em{color:var(--cobalt-soft)}
-.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
-.product{background:var(--navy-2);border:1px solid var(--line-dark);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.product .frame{border-radius:0;box-shadow:none;border:0;border-bottom:1px solid var(--line-dark)}
-.product .frame-body{aspect-ratio:16/10}
-.product-body{padding:28px;display:flex;flex-direction:column;gap:16px;flex:1}
-.product-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.product h3{font-family:var(--serif);font-size:32px;line-height:1}
-.status{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap}
-.status.live{background:rgba(70,200,140,.15);color:#7FE0B0}
-.status.shipped{background:rgba(143,168,255,.16);color:var(--cobalt-soft)}
-.stack{font-size:13px;color:rgba(255,255,255,.5);margin-top:-8px}
-.product dl{display:grid;gap:12px}
-.product dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt-soft)}
-.product dd{font-size:15px;color:rgba(255,255,255,.82)}
-.product .btn{align-self:flex-start;margin-top:auto}
-.mock-cube{position:absolute;inset:0;display:none;place-items:center;background:radial-gradient(circle at 50% 40%,#22336A,#0E1A3A)}
-.no-img .mock-cube{display:grid}
-.cube{width:120px;height:120px;position:relative;transform-style:preserve-3d;transform:rotateX(-24deg) rotateY(38deg);animation:spin 14s linear infinite}
-.cube div{position:absolute;inset:0;border:1px solid rgba(143,168,255,.6);background:rgba(45,91,255,.18);display:grid;place-items:center;font:500 10px var(--mono);color:#cfd9ff;letter-spacing:.05em;text-transform:uppercase}
-.cube .f1{transform:translateZ(60px)}.cube .f2{transform:rotateY(180deg) translateZ(60px)}
-.cube .f3{transform:rotateY(90deg) translateZ(60px)}.cube .f4{transform:rotateY(-90deg) translateZ(60px)}
-.cube .f5{transform:rotateX(90deg) translateZ(60px)}.cube .f6{transform:rotateX(-90deg) translateZ(60px)}
-@keyframes spin{to{transform:rotateX(-24deg) rotateY(398deg)}}
-@media (prefers-reduced-motion:reduce){.cube{animation:none}}
+/* demo frames */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;align-self:start}
+.demo-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}
+.demo-bar .dots{display:flex;gap:5px}
+.demo-bar .dots i{width:8px;height:8px;border-radius:50%;background:var(--line);display:block}
+.demo-note{font-size:.75rem;color:var(--muted);margin-top:12px;font-style:italic}
 
-/* Toolkit */
-.tk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:44px}
-.tk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
-.tk h4{font-size:15px;font-weight:600;margin-bottom:4px}
-.tk p{font-size:13px;color:var(--muted);margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:7px}
-.chips span{font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
-.principles{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.pr h5{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:6px}
-.pr p{font-size:14px;color:var(--muted)}
-.pr a{color:var(--cobalt);text-decoration:none;font-weight:500}
+/* search demo */
+.sbox{display:flex;align-items:center;gap:10px;border:1px solid var(--ink);border-radius:10px;padding:10px 12px;font-family:var(--mono);font-size:.9rem}
+.caret{width:1px;height:18px;background:var(--ink);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.compare>div{border-radius:10px;padding:12px;background:var(--bg);min-width:0}
+.compare .after{background:var(--ai-soft)}
+.compare p{font-size:.82rem}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.mini-grid i{aspect-ratio:3/4;border-radius:6px;background:linear-gradient(160deg,var(--surface),var(--line));display:block}
+.zero{display:grid;place-items:center;aspect-ratio:3/1.6;border:1px dashed var(--line);border-radius:6px;margin-top:8px;font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:center;padding:6px}
+.rules{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.rules span{font-family:var(--mono);font-size:.7rem;padding:4px 8px;border-radius:6px;border:1px solid var(--line)}
 
-/* Contact */
-.contact{background:var(--navy);color:#fff;padding:100px 0 48px}
-.contact h2{font-size:clamp(44px,6vw,72px)}
-.contact h2 em{color:var(--cobalt-soft)}
-.contact .lede{color:rgba(255,255,255,.72)}
-.contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line-dark)}
-.contact-links a{padding:22px 20px 22px 0;text-decoration:none;display:block}
-.contact-links a+a{padding-left:20px;border-left:1px solid var(--line-dark)}
-.contact-links small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt-soft)}
-.contact-links span{font-size:15px;color:#fff}
-.contact-links a:hover span{text-decoration:underline}
-footer{margin-top:72px;font-size:13px;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* skin demo */
+.skin{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start}
+.face{aspect-ratio:3/4;border-radius:50% 50% 46% 46%/42% 42% 58% 58%;background:radial-gradient(circle at 50% 38%,#D8B49A,#B98E73 70%);position:relative}
+.face i{position:absolute;width:16px;height:16px;border-radius:50%;border:2px solid var(--ai);background:color-mix(in srgb,var(--ai) 20%,transparent)}
+.concerns{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:96px 1fr 30px;gap:8px;align-items:center;font-size:.8rem}
+.bar .track{height:6px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.bar .track i{display:block;height:100%;background:var(--ai);border-radius:3px}
+.bar .mono{font-size:.72rem;color:var(--muted);text-align:right}
+.routine{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.routine div{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.78rem}
+.routine div b{display:block;font-family:var(--mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+@media (max-width:460px){.skin{grid-template-columns:80px 1fr}.routine{grid-template-columns:1fr}}
 
-/* Responsive */
-@media (max-width:960px){
-  .hero-grid,.case,.lab-grid{grid-template-columns:1fr}
-  .hero{padding-top:56px}
-  .results-grid{grid-template-columns:1fr 1fr}
-  .stat:nth-child(3){border-left:0;padding-left:0}
-  .more-grid,.tk-grid{grid-template-columns:1fr}
-  .principles{grid-template-columns:1fr 1fr}
-  .contact-links{grid-template-columns:1fr}
-  .contact-links a+a{border-left:0;padding-left:0;border-top:1px solid var(--line-dark)}
-  .case{padding:28px;gap:28px}
-}
-@media (max-width:640px){
-  .nav-links a:not(.pill){display:none}
-  section{padding:72px 0}
-  .wrap{padding:0 16px}
-  .dtl div{grid-template-columns:1fr;gap:4px}
-  .principles,.contact-links{grid-template-columns:1fr}
-  .contact-links a+a{border-left:0;padding-left:0;border-top:1px solid var(--line-dark)}
-  .results-grid{grid-template-columns:1fr}
-  .stat+.stat{border-left:0;padding-left:0}
-  .mock{grid-template-columns:1fr}
-  .mock-photo{display:none}
-}
+/* chat demo */
+.chat{display:grid;grid-template-columns:1.25fr .75fr;gap:12px}
+.chat>*{min-width:0}
+.msgs{display:flex;flex-direction:column;gap:8px}
+.msg{font-size:.83rem;padding:9px 12px;border-radius:14px;max-width:90%}
+.msg.cust{align-self:flex-end;background:var(--ink);color:var(--bg);border-bottom-right-radius:4px}
+.msg.bot{background:var(--bg);border-bottom-left-radius:4px}
+.msg.sys{align-self:center;background:transparent;font-family:var(--mono);font-size:.68rem;color:var(--ai);text-transform:uppercase;letter-spacing:.06em;padding:2px}
+.msg.agent{background:var(--accent-soft);border-bottom-left-radius:4px}
+.ctx{background:var(--bg);border-radius:12px;padding:12px;font-size:.78rem;display:grid;gap:8px;align-content:start}
+.ctx div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.ctx div:last-child{border:0}
+.ctx span{color:var(--muted)}
+@media (max-width:520px){.chat{grid-template-columns:1fr}}
+
+/* cdp demo */
+.cdp{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.cdp>*{min-width:0}
+.col{display:grid;gap:6px}
+.node{font-size:.78rem;border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:var(--bg)}
+.node small{display:block;font-family:var(--mono);font-size:.62rem;color:var(--muted)}
+.hub{background:var(--ink);color:var(--bg);border-radius:14px;padding:16px 14px;text-align:center;font-weight:600;font-size:.88rem;min-width:110px}
+.hub small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;opacity:.85;margin-top:4px}
+.arrow{font-family:var(--mono);color:var(--muted);text-align:center;font-size:.8rem}
+.contract{margin-top:14px;font-family:var(--mono);font-size:.72rem;background:var(--sunk);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre;line-height:1.55;color:var(--muted)}
+.contract b{color:var(--ink);font-weight:500}
+@media (max-width:560px){.cdp{grid-template-columns:1fr}.hub{order:-1}.arrow{display:none}}
+
+/* lab */
+.lab{background:var(--ink);color:var(--bg)}
+.lab .wrap{padding-block:72px}
+.lab .label{color:color-mix(in srgb,var(--bg) 60%,var(--ink))}
+.lab .sec-head p{color:color-mix(in srgb,var(--bg) 70%,var(--ink))}
+.lab-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px;align-items:start}
+.lab-grid>*{min-width:0}
+.lab-card{background:color-mix(in srgb,var(--bg) 6%,var(--ink));border:1px solid color-mix(in srgb,var(--bg) 16%,var(--ink));border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.lab-card .status{font-family:var(--mono);font-size:.7rem;color:var(--ai);text-transform:uppercase;letter-spacing:.07em}
+.lab-card p{color:color-mix(in srgb,var(--bg) 78%,var(--ink));font-size:.95rem}
+.lab-card dl.pdt dt{color:color-mix(in srgb,var(--bg) 55%,var(--ink))}
+.lab-card .tags span{background:color-mix(in srgb,var(--bg) 12%,var(--ink));color:color-mix(in srgb,var(--bg) 75%,var(--ink))}
+.lab-card .btn{border-color:var(--bg);color:var(--bg);align-self:flex-start}
+.screen{background:var(--surface);color:var(--ink);border-radius:12px;padding:14px;min-height:220px}
+.mms{display:grid;grid-template-columns:96px 1fr;gap:12px}
+.look{aspect-ratio:3/4;border-radius:8px;background:linear-gradient(180deg,#B7A58C 0 38%,#3A3D46 38% 78%,#7A5A44 78%);position:relative}
+.look i{position:absolute;left:6px;font-family:var(--mono);font-size:.55rem;background:var(--surface);color:var(--ink);padding:1px 4px;border-radius:3px}
+.items{display:grid;gap:6px;align-content:start}
+.item{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;border-bottom:1px solid var(--line);padding-bottom:6px}
+.item span{color:var(--muted);font-family:var(--mono);font-size:.7rem;white-space:nowrap}
+.cube-stage{display:grid;place-items:center;min-height:220px;perspective:700px}
+.cube{width:110px;height:110px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.cube div{position:absolute;inset:0;border-radius:10px;display:grid;place-items:center;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.cube div:nth-child(1){transform:translateZ(55px);background:#8A1C2E}
+.cube div:nth-child(2){transform:rotateY(180deg) translateZ(55px);background:#2B2B2B}
+.cube div:nth-child(3){transform:rotateY(90deg) translateZ(55px);background:#6E5A4A}
+.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(55px);background:#4A4A48}
+.cube div:nth-child(5){transform:rotateX(90deg) translateZ(55px);background:#A8434F}
+.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(55px);background:#5C1220}
+@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+@media (prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-18deg) rotateY(-30deg)}.caret{animation:none}html{scroll-behavior:auto}}
+@media (max-width:860px){.lab-grid{grid-template-columns:1fr}}
+
+/* foundations */
+.found{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.found article{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.found article:nth-child(odd){border-right:1px solid var(--line)}
+.found article:nth-child(even){padding-left:28px}
+.found .big{font-family:var(--display);font-size:1.6rem;line-height:1.1}
+.found .big small{font-family:var(--body);font-size:.85rem;color:var(--muted);display:block;margin-top:4px}
+.found p{color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.found{grid-template-columns:1fr}.found article,.found article:nth-child(even){padding:24px 0;border-right:0}}
+
+/* toolkit */
+.tk{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tk>div{min-width:0}
+.tk h4{margin:0 0 10px;font-size:.95rem}
+.tk ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tk li{font-size:.82rem;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--surface)}
+@media (max-width:760px){.tk{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding-block:80px}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.contact-grid>*{min-width:0}
+.clist{display:grid;gap:0;border-top:1px solid var(--line)}
+.clist>*{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;flex-wrap:wrap}
+.clist .label{min-width:80px}
+.copy{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 10px;cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+.addr{user-select:all;word-break:break-all}
+@media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:24px;font-size:.82rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
-</head>
-<body>
 
-<nav>
+<header class="top">
   <div class="wrap">
-    <a href="#top" class="logo">Bunmi Sijuwade</a>
-    <div class="nav-links">
-      <a href="#work">Selected Work</a>
-      <a href="#products">AI Products</a>
-      <a href="#toolkit">Toolkit</a>
-      <a href="#contact" class="pill">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Product leader · Digital commerce · AI</p>
-      <h1>Global commerce platforms. <em><span style="white-space:nowrap">Hands-on</span> AI products.</em></h1>
-      <p class="intro">13+ years leading enterprise product for Alexander Wang, Kiehl's, L'Oréal, Estée Lauder and Ezra Coaching. Now I build AI products myself, so the product judgment and the technology stay in the same room.</p>
-      <div class="actions">
-        <a href="#work" class="btn btn-primary">View selected work ↓</a>
-        <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
-      </div>
-      <div class="meta">
-        <span>Brooklyn, NY</span>
-        <span>MPS, NYU Tisch ITP</span>
-        <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div>
-      <!-- Drop a real MatchMyStyle screenshot at images/matchmystyle.png. Until then, a UI sketch shows. -->
-      <div class="frame">
-        <div class="frame-bar"><i></i><i></i><i></i><span>matchmystyle.lovable.app</span></div>
-        <div class="frame-body">
-          <img src="images/matchmystyle.png" alt="MatchMyStyle identifying items in an outfit photo and showing shoppable matches" onerror="this.parentNode.classList.add('no-img')">
-          <div class="mock" aria-hidden="true">
-            <div class="mock-photo">
-              <b data-l="Jacket" style="left:22%;top:18%;width:56%;height:34%"></b>
-              <b data-l="Trousers" style="left:28%;top:54%;width:44%;height:30%"></b>
-              <b data-l="Bag" style="left:66%;top:44%;width:24%;height:16%"></b>
-            </div>
-            <div class="mock-list">
-              <h4>3 items found</h4>
-              <small>Matches in your size</small>
-              <div class="mock-item"><div></div><p>Cropped wool jacket<span>4 matches</span></p></div>
-              <div class="mock-item"><div></div><p>Wide-leg trouser<span>6 matches</span></p></div>
-              <div class="mock-item"><div></div><p>Structured shoulder bag<span>3 matches</span></p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="frame-caption">
-        <span>MatchMyStyle · AI outfit analyzer I built</span>
-        <a href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- RESULTS STRIP -->
-  <div class="results">
-    <div class="wrap">
-      <div class="results-grid">
-        <div class="stat"><strong>260+</strong><span>brand sites under global release governance</span><em>Estée Lauder</em></div>
-        <div class="stat"><strong>40+</strong><span>markets in the SFCC transformation I supported</span><em>L'Oréal / Kiehl's</em></div>
-        <div class="stat"><strong>42%</strong><span>fewer zero-result searches after the AI search launch</span><em>Alexander Wang</em></div>
-        <div class="stat"><strong>35%</strong><span>faster time to first coaching session</span><em>Ezra Coaching</em></div>
-      </div>
-    </div>
+    <a class="brand" href="#top">Bunmi Sijuwade</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#mms">MatchMyStyle</a>
+      <a href="#ai">AI in production</a>
+      <a href="#foundations">Platforms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn primary hdr-cta" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
   </div>
 </header>
 
-<!-- SELECTED WORK -->
-<section id="work">
-  <div class="wrap">
-    <p class="eyebrow">Selected Work</p>
-    <h2>Decisions behind <em>shipped</em> platforms.</h2>
-    <p class="lede">Three enterprise stories, each told through the call I made, what it cost, and what changed.</p>
-
-    <div class="cases">
-      <!-- VERIFY: Decision and Tradeoff lines are drafts. Edit to match what actually happened. -->
-      <article class="case">
-        <div>
-          <p class="case-num">01 · AI search</p>
-          <h3>Reimagining search for luxury commerce</h3>
-          <p class="org">Alexander Wang · Global DTC & Omnichannel</p>
-          <div class="case-metric">
-            <strong>-42%</strong>
-            <span>zero-result searches</span>
-          </div>
-          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Analytics</span></div>
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Product leader · Digital commerce · Applied AI</p>
+        <h1 style="margin-top:14px">I put AI where shoppers feel it, <em>and build the data it runs on.</em></h1>
+        <p class="lede">13+ years leading digital commerce product for Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. AI search, AI skin diagnostics, customer service chat, a unified customer profile and personalization. Now I build AI products myself.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
+          <a class="btn" href="#ai">See enterprise work ↓</a>
         </div>
-        <dl class="dtl">
-          <div><dt>Problem</dt><dd>Luxury customers hit weak relevance, merchandising gaps and dead-end searches.</dd></div>
-          <div><dt>Decision</dt><dd>Treat zero-result handling, synonyms and redirects as launch requirements, not post-launch tuning, and keep ranking controls in merchandising's hands.</dd></div>
-          <div><dt>Tradeoff</dt><dd>Algorithmic relevance versus brand control over how a luxury catalog surfaces. I scoped requirements so the AI did the heavy lifting while merchandisers could still steer results.</dd></div>
-          <div><dt>Evidence</dt><dd>42% fewer zero-result searches, plus an operating model for continuously tuning search performance after launch.</dd></div>
-        </dl>
-      </article>
+        <div class="meta"><span>Brooklyn, NY</span><span>MPS, NYU Tisch ITP</span><span>Certified Scrum Master</span></div>
+      </div>
 
-      <article class="case">
-        <div>
-          <p class="case-num">02 · Platform & workflows</p>
-          <h3>Client, coach and admin platforms</h3>
-          <p class="org">Ezra Coaching · B2B SaaS · First product manager</p>
-          <div class="case-metric">
-            <strong>-35%</strong>
-            <span>time to first coaching session</span>
-          </div>
-          <div class="tags"><span>Onboarding</span><span>Coach matching</span><span>Internal tools</span><span>Design system</span></div>
-        </div>
-        <dl class="dtl">
-          <div><dt>Problem</dt><dd>Three connected products (enterprise clients, coaches, participants) created friction at every handoff.</dd></div>
-          <div><dt>Decision</dt><dd>Anchor the roadmap on time to first session, and prioritize onboarding, coach matching and scheduling changes against that one measure.</dd></div>
-          <div><dt>Tradeoff</dt><dd>Speed on individual products versus investing in a shared design system across all three. I chose shared patterns so fixes landed everywhere at once.</dd></div>
-          <div><dt>Evidence</dt><dd>35% faster time to first coaching session, and a shared design system across the product suite.</dd></div>
-        </dl>
-      </article>
-
-      <article class="case">
-        <div>
-          <p class="case-num">03 · Shared capabilities at scale</p>
-          <h3>Enterprise promotions and global release</h3>
-          <p class="org">Estée Lauder Companies Online</p>
-          <div class="case-metric multi">
-            <div><strong>260+</strong><span>sites</span></div>
-            <div><strong>30+</strong><span>brands</span></div>
-            <div><strong>2,100+</strong><span>tickets / year</span></div>
-          </div>
-          <div class="tags"><span>Promotions engine</span><span>Release governance</span><span>UAT</span><span>Internal tooling</span></div>
-        </div>
-        <dl class="dtl">
-          <div><dt>Problem</dt><dd>Dozens of brand teams needed complex, market-specific promotions on a shared platform without breaking each other's releases.</dd></div>
-          <div><dt>Decision</dt><dd>Rebuild promotions as a shared internal platform for global brand teams, backed by one release governance process for every site.</dd></div>
-          <div><dt>Tradeoff</dt><dd>Brand-level flexibility versus shared governance. Standard capabilities and release gates kept 30+ brands moving without one-off builds.</dd></div>
-          <div><dt>Evidence</dt><dd>Release governance, QA coordination and UAT readiness across 260+ sites and 2,100+ tickets a year.</dd></div>
-        </dl>
-      </article>
-    </div>
-
-    <div class="more">
-      <h3>More work</h3>
-      <div class="more-grid">
-        <details class="mini">
-          <summary>
-            <p class="o">Kiehl's / L'Oréal Luxe</p>
-            <h4>AI skin diagnostics & product data</h4>
-            <p class="hl"><b>U.S. delivery lead</b> for ModiFace Instant Skin Reader, in a <b>40+ market</b> SFCC transformation</p>
-            <span class="toggle">Read more +</span>
-          </summary>
-          <div class="body">
-            <p>Led U.S. product delivery for ModiFace Instant Skin Reader: product mapping, routine logic, UX requirements, legal review, analytics and launch readiness. Shipped an AI-assisted journey connecting skin concerns to Kiehl's products and routines.</p>
-            <p>Supported OpenText DAM and Salsify PIM workflows (taxonomy, metadata, imports, approvals, syndication) behind global product content.</p>
-          </div>
-        </details>
-        <details class="mini">
-          <summary>
-            <p class="o">Alexander Wang</p>
-            <h4>Omnichannel loyalty</h4>
-            <p class="hl">Journey and integrations across <b>4 core platforms</b></p>
-            <span class="toggle">Read more +</span>
-          </summary>
-          <div class="body">
-            <p>Defined the customer journey and integration requirements across SFCC, Teamwork POS/OMS, ActionIQ, Okta and a Cuseum digital wallet with QR-based identification.</p>
-            <p>Set the product and systems foundation for cross-channel recognition, enrollment and personalized engagement.</p>
-          </div>
-        </details>
-        <details class="mini">
-          <summary>
-            <p class="o">Alexander Wang</p>
-            <h4>The 48-hour Vault sale</h4>
-            <p class="hl"><b>+115%</b> YoY, implemented <b>20% faster</b></p>
-            <span class="toggle">Read more +</span>
-          </summary>
-          <div class="body">
-            <p>Coordinated merchandising, pricing, inventory, engineering, operations, customer care, analytics and launch governance across the DTC stack for a high-volume, time-bound sale.</p>
-            <p>Protected inventory accuracy and checkout stability under peak load.</p>
-          </div>
-        </details>
+      <div class="stack" aria-label="Where each project sits in the commerce stack">
+        <div class="stack-head"><span class="label">The stack I've shipped into</span><span class="label" style="color:var(--ai)">tap to jump</span></div>
+        <div class="layer"><span class="label">Customer AI</span>
+          <div class="chips">
+            <a class="chip ai" href="#mms">MatchMyStyle</a>
+            <a class="chip ai" href="#search">AI search</a>
+            <a class="chip ai" href="#skin">Skin reader</a>
+            <a class="chip ai" href="#chat">Service chat</a>
+          </div></div>
+        <div class="flow"></div>
+        <div class="layer"><span class="label">Decisioning</span>
+          <div class="chips"><a class="chip" href="#cdp">Dynamic Yield personalization</a><a class="chip" href="#cdp">Attentive SMS</a></div></div>
+        <div class="flow"></div>
+        <div class="layer"><span class="label">Customer data</span>
+          <div class="chips"><a class="chip data" href="#cdp">ActionIQ CDP</a><a class="chip data" href="#cdp">VIP loyalty</a><a class="chip" href="#skin">Salsify PIM · DAM</a></div></div>
+        <div class="flow"></div>
+        <div class="layer"><span class="label">Commerce core</span>
+          <div class="chips"><span class="chip">SFCC</span><span class="chip">Teamwork POS/OMS</span><span class="chip">ESW</span><span class="chip">Okta</span></div></div>
+        <p class="stack-foot">AI features are only as good as the profile and catalog under them. I've owned work at every layer.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- AI PRODUCTS -->
-<section class="lab" id="products">
-  <div class="wrap">
-    <p class="eyebrow">AI Lab</p>
-    <h2>Independent <em>AI products.</em></h2>
-    <p class="lede">The same product discipline, applied to things I design and build myself.</p>
+    <div class="wrap">
+      <div class="proof">
+        <div><b>−42%</b><span>zero-result searches</span><small>Alexander Wang</small></div>
+        <div><b>+32%</b><span>CVR on AI skin journey</span><small>Kiehl's U.S.</small></div>
+        <div><b>$2.4M</b><span>VIP loyalty revenue</span><small>Alexander Wang</small></div>
+        <div><b>$5.1M</b><span>48-hour Vault sale</span><small>Alexander Wang</small></div>
+      </div>
+      <div class="path" aria-label="Career path">
+        <p class="label">The path</p>
+        <ol>
+          <li><span class="yr">2011</span><b>NYU Tisch ITP</b><span class="role">MPS · thesis: MemoryCube</span></li>
+          <li><span class="yr">2012–2017</span><b>Estée Lauder Companies</b><span class="role">Global Digital eCommerce PM · 260+ brand sites</span></li>
+          <li><span class="yr">2018–2020</span><b>L'Oréal / Kiehl's</b><span class="role">Global Digital DTC PM · AI skin diagnostics, PIM/DAM</span></li>
+          <li><span class="yr">2021–2022</span><b>Ezra Coaching</b><span class="role">Lead Technical PM · first PM, 3-app B2B SaaS</span></li>
+          <li><span class="yr">2022–2025</span><b>Alexander Wang</b><span class="role">Lead PM, Global DTC & Omnichannel · AI search, CDP, loyalty</span></li>
+          <li class="now"><span class="yr">Now</span><b>Building AI products</b><span class="role">MatchMyStyle on Gemini · MemoryCube shipped on Claude</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-    <div class="lab-grid">
-      <article class="product">
-        <!-- Screenshot: images/matchmystyle.png -->
-        <div class="frame">
-          <div class="frame-bar"><i></i><i></i><i></i><span>matchmystyle.lovable.app</span></div>
-          <div class="frame-body">
-            <img src="images/matchmystyle.png" alt="MatchMyStyle product screen" onerror="this.parentNode.classList.add('no-img')">
-            <div class="mock" aria-hidden="true">
-              <div class="mock-photo">
-                <b data-l="Jacket" style="left:22%;top:18%;width:56%;height:34%"></b>
-                <b data-l="Trousers" style="left:28%;top:54%;width:44%;height:30%"></b>
+  <section class="lab" id="lab">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">01 · AI I build</p><h2 style="margin-top:10px">Same product discipline, my own hands on the model.</h2></div>
+        <p>Working products, live and public. I write the prompts, pick the models, and test where they break.</p>
+      </div>
+      <div class="lab-grid">
+        <article class="lab-card" id="mms">
+          <div class="screen">
+            <img class="real-shot" src="images/matchmystyle.png" alt="MatchMyStyle identifying items in an outfit photo and showing shoppable matches" onload="this.nextElementSibling.hidden=true" onerror="this.remove()">
+            <div aria-hidden="true">
+            <div class="sbox" style="margin-bottom:12px;font-size:.78rem"><span style="color:var(--muted)">⤒</span><span>pinterest.com/pin/…  ·  or drop a photo</span></div>
+            <div class="mms">
+              <div class="look"><i style="top:14%">jacket</i><i style="top:52%">trouser</i><i style="top:84%">bag</i></div>
+              <div class="items">
+                <p class="label">3 items found · your size</p>
+                <div class="item">Cropped wool jacket<span>4 matches</span></div>
+                <div class="item">Wide-leg trouser<span>6 matches</span></div>
+                <div class="item">Structured shoulder bag<span>3 matches</span></div>
+                <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)"><i></i><i></i><i></i><i></i></div>
               </div>
-              <div class="mock-list">
-                <h4>2 items found</h4>
-                <small>Matches in your size</small>
-                <div class="mock-item"><div></div><p>Cropped wool jacket<span>4 matches</span></p></div>
-                <div class="mock-item"><div></div><p>Wide-leg trouser<span>6 matches</span></p></div>
-              </div>
+            </div>
+            </div>
+          </div>
+          <div><span class="status">● Live · featured build</span><h3 style="margin-top:6px;font-size:2rem">MatchMyStyle</h3></div>
+          <p>You see a look on Instagram, Pinterest or TikTok and can't shop it in your size. Upload or paste the photo; it identifies every item in the outfit and returns shoppable matches in your size. No account needed, optional profile for closer fit.</p>
+          <dl class="pdt">
+            <div><dt>Input</dt><dd>Photo upload, pasted link, or a grab from Google Lens, Instagram, Pinterest or TikTok.</dd></div>
+            <div><dt>Model</dt><dd>Google Gemini reads the image and breaks the look into individual garments and accessories.</dd></div>
+            <div><dt>Output</dt><dd>Shoppable matches per item, filtered to your size. Add measurements for closer fit.</dd></div>
+            <div><dt>Decision</dt><dd>No sign-up to try it. The first result has to land before asking anyone for an account or measurements.</dd></div>
+            <div><dt>Tradeoff</dt><dd>Anonymous users get size-level matching only. Fit precision comes from the optional profile, so I kept that one step away instead of in the way.</dd></div>
+          </dl>
+          <div class="tags"><span>Google Gemini</span><span>Multimodal vision</span><span>Lovable Cloud</span><span>Prompt design</span></div>
+          <a class="btn" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
+        </article>
+        <article class="lab-card" id="memorycube">
+          <div class="screen cube-stage" aria-hidden="true">
+            <div class="cube"><div>Mood</div><div>Food</div><div>People</div><div>Place</div><div>Time</div><div>Details</div></div>
+          </div>
+          <div><span class="status">● Shipped v0.1 · Feb 2026</span><h3 style="margin-top:6px">MemoryCube</h3></div>
+          <p>Camera rolls flatten moments into grids. MemoryCube gives each memory a 3D cube, one dimension per face. Rotate it, share a public link, and read a Claude-written story drawn from your photos. It started as my 2011 NYU Tisch ITP thesis. I built and shipped it in 2026.</p>
+          <div class="tags"><span>Claude API</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Supabase</span></div>
+          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">02 · AI in production</p><h2 style="margin-top:10px">Customer-facing AI, shipped at luxury brands.</h2></div>
+        <p>Each one paired a model with the operating model around it: who tunes it, what it's allowed to say, where a human takes over.</p>
+      </div>
+
+      <!-- XGen search -->
+      <article class="case" id="search">
+        <div>
+          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Global DTC</span></div>
+          <h3>AI search that knows what luxury shoppers mean</h3>
+          <div class="result"><div><b>−42%</b><span>zero-result searches</span></div><div><b>+28%</b><span>search conversion</span></div></div>
+          <dl class="pdt">
+            <div><dt>Problem</dt><dd>Native SFCC search returned nothing for misspellings, colloquial terms and exact product names. Shoppers hit dead ends.</dd></div>
+            <div><dt>Decision</dt><dd>Brought in XGen AI for intent-based search and made zero-result handling, synonyms and redirects launch requirements, not post-launch tuning.</dd></div>
+            <div><dt>Tradeoff</dt><dd>Algorithmic relevance vs. brand control. The model did the ranking; merchandisers kept boost, bury and pin controls.</dd></div>
+          </dl>
+          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
+          <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
+          <div class="compare">
+            <div><p class="label">Before · native SFCC search</p><div class="zero">0 results<br>"No products found"</div></div>
+            <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
+        </div>
+      </article>
+
+      <!-- Kiehl's -->
+      <article class="case" id="skin">
+        <div>
+          <div class="case-top"><span class="lane">U.S. delivery lead</span><span class="label">Kiehl's · L'Oréal Luxe</span></div>
+          <h3>Instant Skin Reader: AI diagnostics that end in a routine</h3>
+          <div class="result"><div><b>+32%</b><span>conversion</span></div><div><b>$1.2M</b><span>revenue</span></div><div><b>40+</b><span>markets in the SFCC program</span></div></div>
+          <dl class="pdt">
+            <div><dt>Problem</dt><dd>A ModiFace skin scan is only useful if it lands on the right products. Skin concerns had to map cleanly to Kiehl's catalog and routines.</dd></div>
+            <div><dt>What I did</dt><dd>Led U.S. delivery: concern-to-product mapping, routine logic, UX requirements, legal review, analytics and launch readiness.</dd></div>
+            <div><dt>Data layer</dt><dd>Ran Salsify PIM and OpenText DAM workshops (taxonomy, metadata, approvals, syndication) so product content was clean enough for the AI to recommend from.</dd></div>
+          </dl>
+          <div class="tags"><span>ModiFace</span><span>SFCC</span><span>Salsify PIM</span><span>OpenText DAM</span><span>Legal review</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">scan → concern → routine</span></div>
+          <div class="skin">
+            <div class="face"><i style="top:30%;left:22%"></i><i style="top:52%;left:62%"></i><i style="top:18%;left:52%"></i></div>
+            <div class="concerns">
+              <p class="label">Detected concerns</p>
+              <div class="bar"><span>Dehydration</span><span class="track"><i style="width:72%"></i></span><span class="mono">72</span></div>
+              <div class="bar"><span>Uneven tone</span><span class="track"><i style="width:48%"></i></span><span class="mono">48</span></div>
+              <div class="bar"><span>Fine lines</span><span class="track"><i style="width:31%"></i></span><span class="mono">31</span></div>
+            </div>
+          </div>
+          <div class="routine">
+            <div><b>AM · step 1</b>Cleanse</div>
+            <div><b>AM · step 2</b>Hydrating serum</div>
+            <div><b>PM · step 3</b>Moisturizer</div>
+          </div>
+          <p class="demo-note">Illustration of the journey, not real scan output.</p>
+        </div>
+      </article>
+
+      <!-- Kustomer -->
+      <article class="case" id="chat">
+        <div>
+          <div class="case-top"><span class="lane">Platform owner</span><span class="label">Alexander Wang · Customer care</span></div>
+          <h3>Service chat that hands off with the full story</h3>
+          <dl class="pdt" style="margin-top:6px">
+            <div><dt>Problem</dt><dd>High-value clients asking about orders, returns or a VIP appointment shouldn't repeat themselves, and agents shouldn't hunt across systems.</dd></div>
+            <div><dt>What I did</dt><dd>Managed the Kustomer platform behind site chat: automated answers for tier-1 intents (order status, shipping, returns) and routing to care agents for everything else.</dd></div>
+            <div><dt>Data layer</dt><dd>Wired customer context into the agent view, so order history from SFCC, store purchases from Teamwork and VIP tier show up the moment a chat lands.</dd></div>
+          </dl>
+          <div class="tags"><span>Kustomer</span><span>Chat routing</span><span>Human handoff</span><span>SFCC</span><span>Teamwork</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">site chat · agent view</span></div>
+          <div class="chat">
+            <div class="msgs">
+              <div class="msg cust">Where's my order? It was a gift</div>
+              <div class="msg bot">Order #AW-48213 shipped Tuesday and arrives Friday. Track it here →</div>
+              <div class="msg cust">Can I change the gift note?</div>
+              <div class="msg sys">→ routed to client care</div>
+              <div class="msg agent">Hi, this is Maya. I can see the order. What should the note say?</div>
+            </div>
+            <div class="ctx">
+              <p class="label">Agent sees</p>
+              <div><span>Tier</span><b>VIP</b></div>
+              <div><span>Orders</span><b>14</b></div>
+              <div><span>Last store</span><b>SoHo</b></div>
+              <div><span>Open order</span><b>In transit</b></div>
             </div>
           </div>
         </div>
-        <div class="product-body">
-          <div class="product-head">
-            <h3>MatchMyStyle</h3>
-            <span class="status live">● Working product</span>
-          </div>
-          <p class="stack">Google Gemini · Lovable Cloud</p>
-          <dl>
-            <div><dt>Problem</dt><dd>You see a look on Instagram, Pinterest or TikTok and have no fast way to shop it in your size.</dd></div>
-            <div><dt>What I built</dt><dd>Upload or paste a photo; it identifies every item in the outfit and returns shoppable matches in your size. No account needed, with an optional profile for closer fit.</dd></div>
-          </dl>
-          <a href="https://matchmystyle.lovable.app" target="_blank" rel="noopener" class="btn btn-primary">Try the demo ↗</a>
-        </div>
       </article>
 
-      <article class="product">
-        <!-- Screenshot: images/memorycube.png -->
-        <div class="frame">
-          <div class="frame-bar"><i></i><i></i><i></i><span>memorycube.lovable.app</span></div>
-          <div class="frame-body">
-            <img src="images/memorycube.png" alt="MemoryCube 3D cube with photos on each face" onerror="this.parentNode.classList.add('no-img')">
-            <div class="mock-cube" aria-hidden="true">
-              <div class="cube"><div class="f1">Mood</div><div class="f2">Food</div><div class="f3">People</div><div class="f4">Place</div><div class="f5">Time</div><div class="f6">Details</div></div>
+      <!-- CDP + personalization -->
+      <article class="case" id="cdp">
+        <div>
+          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Omnichannel</span></div>
+          <h3>One customer profile, used everywhere: CDP, loyalty and personalization</h3>
+          <div class="result"><div><b>$2.4M</b><span>VIP loyalty revenue</span></div><div><b>10,000+</b><span>loyalty members</span></div><div><b>4</b><span>core platforms joined</span></div></div>
+          <dl class="pdt">
+            <div><dt>Problem</dt><dd>Online, in-store and loyalty data lived in separate systems. A client spending in SoHo looked like a stranger online.</dd></div>
+            <div><dt>What I did</dt><dd>Defined the identity and integration requirements across SFCC, Teamwork POS/OMS, ActionIQ, Okta and a Cuseum digital wallet with QR check-in, up to a top tier for the highest-value clients and stylists.</dd></div>
+            <div><dt>Activation</dt><dd>Wrote the ActionIQ → Dynamic Yield data contract so CDP segments drove homepage and PDP personalization, plus Attentive SMS flows and agent context in Kustomer.</dd></div>
+          </dl>
+          <div class="tags"><span>ActionIQ CDP</span><span>Dynamic Yield</span><span>Teamwork POS</span><span>Okta</span><span>Cuseum</span><span>Attentive</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">unified commerce data flow</span></div>
+          <div class="cdp">
+            <div class="col">
+              <div class="node">SFCC<small>web orders</small></div>
+              <div class="node">Teamwork<small>store POS / OMS</small></div>
+              <div class="node">Okta + Cuseum<small>identity · wallet</small></div>
+            </div>
+            <div class="arrow">→<br>→<br>→</div>
+            <div class="hub">ActionIQ<small>unified profile + segments</small></div>
+          </div>
+          <div class="cdp" style="margin-top:10px">
+            <div></div><div></div>
+            <div class="col">
+              <div class="node">Dynamic Yield<small>homepage · PDP</small></div>
+              <div class="node">Attentive<small>VIP · browse abandon</small></div>
+              <div class="node">Kustomer<small>agent context</small></div>
             </div>
           </div>
-        </div>
-        <div class="product-body">
-          <div class="product-head">
-            <h3>MemoryCube</h3>
-            <span class="status shipped">Shipped · v0.1</span>
-          </div>
-          <p class="stack">React · TypeScript · Three.js · Supabase · Claude</p>
-          <dl>
-            <div><dt>Problem</dt><dd>Camera rolls flatten moments into endless grids. The neighborhood, mood and people behind a memory get lost.</dd></div>
-            <div><dt>What I built</dt><dd>An interactive 3D cube where each face holds one dimension of a moment. Rotate it, share it with a public link, and read a Claude-generated story drawn from your photos. NYU Tisch ITP thesis, shipped Feb 2026 for a competition deadline.</dd></div>
-          </dl>
-          <a href="https://memorycube.lovable.app" target="_blank" rel="noopener" class="btn btn-primary">Try the demo ↗</a>
+          <div class="contract"><b>activation</b>  ActionIQ → Dynamic Yield
+<b>transport</b>   S3 snapshot · user data feed
+<b>key</b>         hashed email (first attribute)
+<b>segments</b>    VIP · new · at-risk · lapsed</div>
         </div>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- TOOLKIT -->
-<section id="toolkit">
-  <div class="wrap">
-    <p class="eyebrow">Toolkit</p>
-    <h2>Enterprise depth, <em>current</em> AI practice.</h2>
-
-    <div class="tk-grid">
-      <div class="tk">
-        <h4>Commerce platforms</h4>
-        <p>Shipped in enterprise work</p>
-        <div class="chips">
-          <span>Salesforce Commerce Cloud</span><span>XGen AI</span><span>ActionIQ CDP</span><span>Dynamic Yield</span><span>Teamwork POS/OMS</span><span>ESW Cross-Border</span><span>Adyen</span><span>Okta</span><span>Cloudflare</span><span>Attentive</span><span>Kustomer</span><span>Salsify PIM</span><span>OpenText DAM</span><span>RLM ERP</span>
-        </div>
+  <section class="block" id="foundations">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">03 · Platforms & operations</p><h2 style="margin-top:10px">The commerce foundations under it.</h2></div>
+        <p>Shared capabilities, governance and peak-load launches. The unglamorous work that lets AI features ship safely.</p>
       </div>
-      <div class="tk">
-        <h4>AI in shipped products</h4>
-        <p>Used in my live products</p>
-        <div class="chips">
-          <span>Claude API</span><span>Google Gemini</span><span>LLM integration</span><span>Prompt design</span><span>Supabase</span><span>Three.js</span><span>Lovable</span><span>Rapid prototyping</span><span>Human-in-the-loop</span>
-        </div>
+      <div class="found">
+        <article>
+          <p class="label">Alexander Wang</p>
+          <div class="big">$5.1M · +115% YoY<small>48-hour Vault sale, implemented 20% faster</small></div>
+          <p>Coordinated merchandising, pricing, inventory, engineering, ops, care and analytics. Held inventory accuracy and checkout stability under peak load.</p>
+        </article>
+        <article>
+          <p class="label">Estée Lauder Companies Online</p>
+          <div class="big">260+ sites · 30+ brands<small>2,100+ tickets a year under one release process</small></div>
+          <p>Prototyped and delivered a new promotions application that moved setup from engineers to merchandisers, then trained brand teams globally.</p>
+        </article>
+        <article>
+          <p class="label">Ezra Coaching · B2B SaaS</p>
+          <div class="big">−35%<small>time to first coaching session</small></div>
+          <p>First product manager across client, coach and admin apps. Anchored the roadmap on one measure and built a shared design system across all three.</p>
+        </article>
+        <article>
+          <p class="label">Alexander Wang · Cross-border</p>
+          <div class="big">ESW international checkout<small>duty and tax data contracts with SFCC</small></div>
+          <p>Owned the duty and tax data contract between ESW and SFCC so international orders priced, landed and reported correctly.</p>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="principles">
-      <div class="pr"><h5>AI with purpose</h5><p>AI earns its place when it improves a real decision. <a href="#work">AI search ↑</a></p></div>
-      <div class="pr"><h5>One measure that matters</h5><p>Pick the outcome, then cut every change against it. <a href="#work">Ezra ↑</a></p></div>
-      <div class="pr"><h5>Systems over one-offs</h5><p>Shared capabilities scale better than custom builds. <a href="#work">Estée Lauder ↑</a></p></div>
-      <div class="pr"><h5>Prototype to learn</h5><p>Thesis concept to shipped build in weeks. <a href="#products">MemoryCube ↑</a></p></div>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="label">04 · Toolkit</p><h2 style="margin-top:10px">What I've shipped with.</h2></div></div>
+      <div class="tk">
+        <div><h4>AI & search</h4><ul><li>XGen AI</li><li>ModiFace</li><li>Dynamic Yield</li><li>Kustomer</li><li>Google Gemini</li><li>Claude API</li><li>Prompt design</li><li>Human-in-the-loop</li></ul></div>
+        <div><h4>Customer data</h4><ul><li>ActionIQ CDP</li><li>Okta</li><li>Cuseum wallet</li><li>Attentive</li><li>Salsify PIM</li><li>OpenText DAM</li></ul></div>
+        <div><h4>Commerce core</h4><ul><li>Salesforce Commerce Cloud</li><li>Teamwork POS/OMS</li><li>ESW cross-border</li><li>Adyen</li><li>RLM ERP</li><li>Cloudflare</li><li>Supabase</li><li>Lovable</li></ul></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <p class="eyebrow" style="color:var(--cobalt-soft)">Contact</p>
-    <h2>Get in <em>touch.</em></h2>
-    <p class="lede">Open to senior product, AI product and digital commerce leadership roles where strategy and hands-on building belong together.</p>
-
-    <div class="contact-links">
-      <a href="mailto:bunmi007@gmail.com"><small>Email</small><span>bunmi007@gmail.com</span></a>
-      <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener"><small>LinkedIn</small><span>@bunmi-sijuwade ↗</span></a>
-      <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener"><small>Substack</small><span>AI Across Industries ↗</span></a>
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="label">Contact</p>
+        <h2 style="margin-top:10px">Looking for senior product and AI product roles in commerce.</h2>
+        <p class="lede" style="margin-top:16px">Where strategy and hands-on building sit in the same room.</p>
+      </div>
+      <div class="clist">
+        <div><span class="label">Email</span><span class="addr" id="email">bunmi007@gmail.com</span><button class="copy" id="copyEmail" type="button">Copy</button></div>
+        <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span>@bunmi-sijuwade ↗</span></a>
+        <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener"><span class="label">Substack</span><span>AI Across Industries ↗</span></a>
+        <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener"><span class="label">GitHub</span><span>@BunmiSijuwade ↗</span></a>
+      </div>
     </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Bunmi Sijuwade · Brooklyn, NY</span><span>Product screens shown are illustrations.</span></div></footer>
 
-    <footer>
-      <span>Bunmi Sijuwade · Brooklyn, NY</span>
-      <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener" style="text-decoration:none">GitHub @BunmiSijuwade ↗</a>
-    </footer>
-  </div>
-</section>
-
-</body>
-</html>
+<script>
+document.getElementById('copyEmail').addEventListener('click', function(){
+  var btn=this, txt=document.getElementById('email').textContent;
+  function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
+  try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
+});
+</script>
