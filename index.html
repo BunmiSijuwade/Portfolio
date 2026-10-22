@@ -1,9 +1,16 @@
-<title>Bunmi Sijuwade Portfolio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Bunmi Sijuwade: product leader in digital commerce and AI. AI search, AI skin diagnostics, customer data and personalization at Alexander Wang and Kiehl's, plus AI products I build myself.">
+<title>Bunmi Sijuwade | Product Leader, Digital Commerce &amp; AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+img{max-width:100%}
+[hidden]{display:none!important}
 /* Layout: a commerce "stack" — customer-facing AI on top, data and platforms underneath; every case is placed on that stack */
 :root{
   --bg:#F2F2F0; --surface:#FFFFFF; --sunk:#E6E6E3; --ink:#141414; --muted:#5E5E5A; --line:#D4D4D0;
@@ -247,6 +254,8 @@ dl.pdt dd{margin:0;font-size:.97rem}
 footer{border-top:1px solid var(--line);padding-block:24px;font-size:.82rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
+</head>
+<body>
 
 <header class="top">
   <div class="wrap">
@@ -360,6 +369,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </div>
           <div><span class="status">● Shipped v0.1 · Feb 2026</span><h3 style="margin-top:6px">MemoryCube</h3></div>
           <p>Camera rolls flatten moments into grids. MemoryCube gives each memory a 3D cube, one dimension per face. Rotate it, share a public link, and read a Claude-written story drawn from your photos. It started as my 2011 NYU Tisch ITP thesis. I built and shipped it in 2026.</p>
+          <dl class="pdt">
+            <div><dt>Input</dt><dd>Photos uploaded to six faces: mood, food, people, place, time and details.</dd></div>
+            <div><dt>Model</dt><dd>Claude reads what's on each face and writes a short story of the memory.</dd></div>
+            <div><dt>Output</dt><dd>A 3D cube you can rotate in Three.js, plus a public share link. Works on mobile.</dd></div>
+            <div><dt>Decision</dt><dd>Creators sign in with Google so cubes persist. Anyone with the link can view, no account needed.</dd></div>
+            <div><dt>Tradeoff</dt><dd>Six fixed faces instead of a free-form album. Less flexible, but the structure is what makes people remember the context, not just the photo.</dd></div>
+          </dl>
           <div class="tags"><span>Claude API</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Supabase</span></div>
           <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
         </article>
@@ -573,3 +589,6 @@ document.getElementById('copyEmail').addEventListener('click', function(){
   try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
 });
 </script>
+
+</body>
+</html>
