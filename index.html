@@ -231,6 +231,51 @@ dl.pdt dd{margin:0;font-size:.97rem}
 @media (prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-18deg) rotateY(-30deg)}.caret{animation:none}html{scroll-behavior:auto}}
 @media (max-width:860px){.lab-grid{grid-template-columns:1fr}}
 
+/* builds */
+.lab{--lab-accent:#E38C99;--lab-text:color-mix(in srgb,var(--bg) 82%,var(--ink));--lab-dim:color-mix(in srgb,var(--bg) 58%,var(--ink));--lab-line:color-mix(in srgb,var(--bg) 16%,var(--ink))}
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-block:1px solid var(--lab-line);padding-block:18px;margin-bottom:8px}
+.method div{display:grid;gap:4px}
+.method b{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--lab-accent)}
+.method span{font-size:.95rem;color:var(--lab-text)}
+.build{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:56px;border-bottom:1px solid var(--lab-line)}
+.build:last-child{border-bottom:0;padding-bottom:0}
+.build>*{min-width:0}
+.build.flip .build-media{order:2}
+.build.small{grid-template-columns:1fr 1.25fr}
+.build-media{display:grid;gap:12px}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shot{margin:0;display:grid;gap:6px;min-width:0}
+.shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--lab-line);background:#F7F6F3}
+.hero-shot img{box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.shot figcaption{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--lab-dim)}
+.shot figcaption i{font-style:normal;border:1px solid currentColor;border-radius:999px;padding:0 5px;margin-left:4px}
+.build-copy{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.build-copy h3{font-size:clamp(2rem,3.6vw,2.8rem);line-height:1}
+.status{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--lab-dim)}
+.status.live{color:var(--lab-accent)}
+.pitch{font-size:1.2rem;line-height:1.4;color:var(--bg)}
+.flow-steps{list-style:none;margin:0;padding:0;display:grid;gap:0;width:100%;counter-reset:st;border-left:1px solid var(--lab-line)}
+.flow-steps li{counter-increment:st;display:grid;gap:2px;padding:0 0 14px 22px;position:relative}
+.flow-steps li:last-child{padding-bottom:0}
+.flow-steps li::before{content:counter(st);position:absolute;left:-11px;top:0;width:21px;height:21px;border-radius:50%;background:var(--ink);border:1px solid var(--lab-accent);color:var(--lab-accent);font-family:var(--mono);font-size:.68rem;display:grid;place-items:center}
+.flow-steps b{font-weight:600;font-size:.98rem}
+.flow-steps span{font-size:.9rem;color:var(--lab-dim)}
+.extra{font-size:.93rem;color:var(--lab-text)}
+.extra b{color:var(--bg);font-weight:600}
+.decision{font-size:.93rem;color:var(--lab-text);border-left:2px solid var(--lab-accent);padding-left:14px}
+.decision span{display:block;font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;color:var(--lab-accent);margin-bottom:2px}
+.lab .tags{margin-top:0}
+.lab .tags span{background:color-mix(in srgb,var(--bg) 12%,var(--ink));color:var(--lab-text)}
+.lab .btn{border-color:var(--bg);color:var(--bg)}
+.lab .btn:hover{background:var(--bg);color:var(--ink)}
+.lab .screen{background:var(--surface);color:var(--ink);border-radius:12px;padding:16px}
+.modes{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--sunk)}
+.modes span{font-size:.75rem;padding:5px 12px;border-radius:999px;color:var(--muted)}
+.modes .on{background:var(--surface);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+@media (max-width:900px){.build,.build.small{grid-template-columns:1fr;gap:28px;padding-block:40px}.build.flip .build-media{order:0}}
+@media (max-width:760px){.method{grid-template-columns:1fr}}
+@media (max-width:460px){.thumbs{grid-template-columns:1fr}}
+
 /* foundations */
 .found{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .found article{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
@@ -283,24 +328,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="label">Product leader · Digital commerce · Applied AI</p>
-        <h1 style="margin-top:14px">I put AI where shoppers feel it, <em>and build the data it runs on.</em></h1>
-        <p class="lede">13+ years leading digital commerce product for Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. AI search, AI skin diagnostics, customer service chat, a unified customer profile and personalization. Now I build AI products myself.</p>
+        <p class="label">Product leader · Intelligent applications · Applied AI</p>
+        <h1 style="margin-top:14px">I build AI products people love to use, <em>and the data infrastructure that powers them.</em></h1>
+        <p class="lede">13+ years of technical product leadership at Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. I've shipped AI into production commerce: computer vision, semantic search, unified customer profiles and personalization. Now I design, prototype and ship AI products myself.</p>
         <div class="cta">
           <a class="btn primary" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
-          <a class="btn" href="#ai">See enterprise work ↓</a>
+          <a class="btn" href="#lab">See what I build ↓</a>
         </div>
         <div class="meta"><span>Brooklyn, NY</span><span>MPS, NYU Tisch ITP</span><span>Certified Scrum Master</span></div>
       </div>
 
       <div class="stack" aria-label="Where each project sits in the commerce stack">
-        <div class="stack-head"><span class="label">The stack I've shipped into</span><span class="label" style="color:var(--ai)">tap to jump</span></div>
-        <div class="layer"><span class="label">Customer AI</span>
+        <div class="stack-head"><span class="label">The stack I've shipped into</span></div>
+        <div class="layer"><span class="label">Applied AI</span>
           <div class="chips">
             <a class="chip ai" href="#mms">MatchMyStyle</a>
             <a class="chip ai" href="#search">AI search</a>
             <a class="chip ai" href="#skin">Skin reader</a>
             <a class="chip ai" href="#chat">Service chat</a>
+            <a class="chip ai" href="#memorycube">MemoryCube</a>
+            <a class="chip ai" href="#coach">Practice Coach</a>
           </div></div>
         <div class="flow"></div>
         <div class="layer"><span class="label">Decisioning</span>
@@ -326,11 +373,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="label">The path</p>
         <ol>
           <li><span class="yr">2011</span><b>NYU Tisch ITP</b><span class="role">MPS · thesis: MemoryCube</span></li>
-          <li><span class="yr">2012–2017</span><b>Estée Lauder Companies</b><span class="role">Global Digital eCommerce PM · 260+ brand sites</span></li>
-          <li><span class="yr">2018–2020</span><b>L'Oréal / Kiehl's</b><span class="role">Global Digital DTC PM · AI skin diagnostics, PIM/DAM</span></li>
+          <li><span class="yr">2012–2017</span><b>Estée Lauder Companies</b><span class="role">Global Digital eCommerce PM · release management, 260+ sites</span></li>
+          <li><span class="yr">2018–2020</span><b>L'Oréal / Kiehl's</b><span class="role">Global Digital DTC PM · U.S. lead, AI skin diagnostics · PIM/DAM</span></li>
           <li><span class="yr">2021–2022</span><b>Ezra Coaching</b><span class="role">Lead Technical PM · first PM, 3-app B2B SaaS</span></li>
           <li><span class="yr">2022–2025</span><b>Alexander Wang</b><span class="role">Lead PM, Global DTC & Omnichannel · AI search, CDP, loyalty</span></li>
-          <li class="now"><span class="yr">Now</span><b>Building AI products</b><span class="role">MatchMyStyle on Gemini · MemoryCube shipped on Claude</span></li>
+          <li class="now"><span class="yr">Now</span><b>Building AI products</b><span class="role">MatchMyStyle on Gemini · MemoryCube on Claude · Practice Coach in progress</span></li>
         </ol>
       </div>
     </div>
@@ -339,56 +386,77 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="lab" id="lab">
     <div class="wrap">
       <div class="sec-head">
-        <div><p class="label">01 · AI I build</p><h2 style="margin-top:10px">Same product discipline, my own hands on the model.</h2></div>
-        <p>Working products, live and public. I write the prompts, pick the models, and test where they break.</p>
+        <div><p class="label">01 · AI I build</p><h2 style="margin-top:10px">Same product discipline. My own hands on the model.</h2></div>
+        <p>Working apps, live and public. I write the system prompts, evaluate model output, and stress-test the edge cases where models break.</p>
       </div>
-      <div class="lab-grid">
-        <article class="lab-card" id="mms">
-          <div class="screen">
-            <img class="real-shot" src="images/matchmystyle.png" alt="MatchMyStyle identifying items in an outfit photo and showing shoppable matches" onload="this.nextElementSibling.hidden=true" onerror="this.remove()">
-            <div aria-hidden="true">
-            <div class="sbox" style="margin-bottom:12px;font-size:.78rem"><span style="color:var(--muted)">⤒</span><span>pinterest.com/pin/…  ·  or drop a photo</span></div>
-            <div class="mms">
-              <div class="look"><i style="top:14%">jacket</i><i style="top:52%">trouser</i><i style="top:84%">bag</i></div>
-              <div class="items">
-                <p class="label">3 items found · your size</p>
-                <div class="item">Cropped wool jacket<span>4 matches</span></div>
-                <div class="item">Wide-leg trouser<span>6 matches</span></div>
-                <div class="item">Structured shoulder bag<span>3 matches</span></div>
-                <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)"><i></i><i></i><i></i><i></i></div>
-              </div>
-            </div>
+      <div class="method">
+        <div><b>Prompts</b><span>I write and version the system prompts myself.</span></div>
+        <div><b>Evaluation</b><span>I test output against real inputs, not demo photos.</span></div>
+        <div><b>Edge cases</b><span>I find where the model breaks before a user does.</span></div>
+      </div>
+
+      <article class="build" id="mms">
+        <div class="build-media">
+          <figure class="shot hero-shot"><img src="images/mms-analyzer.jpg" alt="MatchMyStyle analyzer naming an outfit's aesthetic, Gallery Hours, and listing five detected items with matches" loading="lazy"><figcaption>Analyzer</figcaption></figure>
+          <div class="thumbs">
+            <figure class="shot"><img src="images/mms-concierge.jpg" alt="MatchMyStyle Concierge chat building a full jumpsuit look with swap and remove controls and a running total" loading="lazy"><figcaption>Concierge <i>beta</i></figcaption></figure>
+            <figure class="shot"><img src="images/mms-home.jpg" alt="MatchMyStyle home page featuring the Off-Duty Muse aesthetic" loading="lazy"><figcaption>Aesthetics</figcaption></figure>
+          </div>
+        </div>
+        <div class="build-copy">
+          <span class="status live">● Live</span>
+          <h3>MatchMyStyle</h3>
+          <p class="pitch">See a look online, shop it in your size.</p>
+          <ol class="flow-steps">
+            <li><b>Drop a photo</b><span>Upload, paste a link, or grab from Instagram, Pinterest, TikTok</span></li>
+            <li><b>Gemini reads it</b><span>Names the aesthetic and detects every item</span></li>
+            <li><b>Shop it</b><span>Matches per item in your size, new or vintage</span></li>
+          </ol>
+          <p class="extra"><b>Concierge (beta):</b> describe what you want and it builds a full look with a running total. Swap any piece, or steer it: under $100, dressier, more relaxed.</p>
+          <p class="decision"><span>Product call</span>No sign-up to try it. The first result has to land before I ask anyone for an account or measurements.</p>
+          <div class="tags"><span>Google Gemini</span><span>Multimodal vision</span><span>Conversational commerce</span><span>Lovable Cloud</span></div>
+          <a class="btn" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
+        </div>
+      </article>
+
+      <article class="build flip" id="memorycube">
+        <div class="build-media">
+          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
+        </div>
+        <div class="build-copy">
+          <span class="status live">● Live · shipped Feb 2026</span>
+          <h3>MemoryCube</h3>
+          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
+          <ol class="flow-steps">
+            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
+            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
+            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
+          </ol>
+          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
+          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
+          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
+          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
+        </div>
+      </article>
+
+      <article class="build small" id="coach">
+        <div class="build-media">
+          <div class="screen" aria-hidden="true">
+            <div class="modes"><span class="on">Work</span><span>Wellness</span></div>
+            <div class="msgs" style="margin-top:12px">
+              <div class="msg cust">I froze in my 1:1 when my manager pushed back.</div>
+              <div class="msg bot">That happens. What did you want to say in that moment?</div>
             </div>
           </div>
-          <div><span class="status">● Live · featured build</span><h3 style="margin-top:6px;font-size:2rem">MatchMyStyle</h3></div>
-          <p>You see a look on Instagram, Pinterest or TikTok and can't shop it in your size. Upload or paste the photo; it identifies every item in the outfit and returns shoppable matches in your size. No account needed, optional profile for closer fit.</p>
-          <dl class="pdt">
-            <div><dt>Input</dt><dd>Photo upload, pasted link, or a grab from Google Lens, Instagram, Pinterest or TikTok.</dd></div>
-            <div><dt>Model</dt><dd>Google Gemini reads the image and breaks the look into individual garments and accessories.</dd></div>
-            <div><dt>Output</dt><dd>Shoppable matches per item, filtered to your size. Add measurements for closer fit.</dd></div>
-            <div><dt>Decision</dt><dd>No sign-up to try it. The first result has to land before asking anyone for an account or measurements.</dd></div>
-            <div><dt>Tradeoff</dt><dd>Anonymous users get size-level matching only. Fit precision comes from the optional profile, so I kept that one step away instead of in the way.</dd></div>
-          </dl>
-          <div class="tags"><span>Google Gemini</span><span>Multimodal vision</span><span>Lovable Cloud</span><span>Prompt design</span></div>
-          <a class="btn" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
-        </article>
-        <article class="lab-card" id="memorycube">
-          <div class="screen cube-stage" aria-hidden="true">
-            <div class="cube"><div>Mood</div><div>Food</div><div>People</div><div>Place</div><div>Time</div><div>Details</div></div>
-          </div>
-          <div><span class="status">● Shipped v0.1 · Feb 2026</span><h3 style="margin-top:6px">MemoryCube</h3></div>
-          <p>Camera rolls flatten moments into grids. MemoryCube gives each memory a 3D cube, one dimension per face. Rotate it, share a public link, and read a Claude-written story drawn from your photos. It started as my 2011 NYU Tisch ITP thesis. I built and shipped it in 2026.</p>
-          <dl class="pdt">
-            <div><dt>Input</dt><dd>Photos uploaded to six faces: mood, food, people, place, time and details.</dd></div>
-            <div><dt>Model</dt><dd>Claude reads what's on each face and writes a short story of the memory.</dd></div>
-            <div><dt>Output</dt><dd>A 3D cube you can rotate in Three.js, plus a public share link. Works on mobile.</dd></div>
-            <div><dt>Decision</dt><dd>Creators sign in with Google so cubes persist. Anyone with the link can view, no account needed.</dd></div>
-            <div><dt>Tradeoff</dt><dd>Six fixed faces instead of a free-form album. Less flexible, but the structure is what makes people remember the context, not just the photo.</dd></div>
-          </dl>
-          <div class="tags"><span>Claude API</span><span>React</span><span>TypeScript</span><span>Three.js</span><span>Supabase</span></div>
-          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try it ↗</a>
-        </article>
-      </div>
+        </div>
+        <div class="build-copy">
+          <span class="status">◐ In progress</span>
+          <h3>Practice Coach</h3>
+          <p class="pitch">An AI coach grounded in published coaching research, with work and wellness modes.</p>
+          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
+          <div class="tags"><span>LLM coaching</span><span>Prompt design</span></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -580,7 +648,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="lede" style="margin-top:16px">Where strategy and hands-on building sit in the same room.</p>
       </div>
       <div class="clist">
-        <div><span class="label">Email</span><span class="addr" id="email">bunmi007@gmail.com</span><button class="copy" id="copyEmail" type="button">Copy</button></div>
         <a href="https://www.linkedin.com/in/bunmi-sijuwade/" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span>@bunmi-sijuwade ↗</span></a>
         <a href="https://substack.com/@bunmisijuwade" target="_blank" rel="noopener"><span class="label">Substack</span><span>AI Across Industries ↗</span></a>
         <a href="https://github.com/BunmiSijuwade" target="_blank" rel="noopener"><span class="label">GitHub</span><span>@BunmiSijuwade ↗</span></a>
@@ -588,16 +655,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>Bunmi Sijuwade · Brooklyn, NY</span><span>Product screens shown are illustrations.</span></div></footer>
+<footer><div class="wrap"><span>Bunmi Sijuwade · Brooklyn, NY</span><span>MatchMyStyle and MemoryCube screens are real. Enterprise case screens are illustrations.</span></div></footer>
 
-<script>
-document.getElementById('copyEmail').addEventListener('click', function(){
-  var btn=this, txt=document.getElementById('email').textContent;
-  function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
-  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
-  try{navigator.clipboard.writeText(txt).then(done,fallback)}catch(e){fallback()}
-});
-</script>
 
 </body>
 </html>
