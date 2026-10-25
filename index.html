@@ -287,6 +287,17 @@ dl.pdt dd{margin:0;font-size:.97rem}
 .work-intro .method b{color:var(--accent)}
 .work-intro .method span{color:var(--muted)}
 
+/* coach mock */
+.coach-screen{display:grid;gap:12px}
+.coach-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.next-step{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;border:1px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:.82rem;font-weight:600}
+.next-step .label{color:var(--accent)}
+.evals{width:100%}
+.evals ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.evals li{font-size:.92rem;color:var(--lab-text);padding-left:20px;position:relative}
+.evals li::before{content:"?";position:absolute;left:0;top:0;font-family:var(--mono);font-size:.78rem;color:var(--lab-accent)}
+.evals .label{color:var(--lab-dim)}
+
 /* foundations */
 .found{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .found article{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
@@ -462,23 +473,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
   <section class="lab band">
     <div class="wrap">
-      <article class="build" id="memorycube">
+      <article class="build" id="coach">
         <div class="build-media">
-          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
+          <div class="screen coach-screen" aria-hidden="true">
+            <div class="coach-top"><div class="modes"><span class="on">Work</span><span>Wellness</span></div><span class="label">Session 3</span></div>
+            <div class="msgs">
+              <div class="msg cust">I froze in my 1:1 when my manager pushed back on my roadmap.</div>
+              <div class="msg bot">That's a hard moment. What did you want to say right then?</div>
+              <div class="msg cust">That the dates were based on eng estimates, not a guess.</div>
+              <div class="msg bot">Good, that's your anchor. Want to practice saying it out loud? I'll play your manager.</div>
+            </div>
+            <div class="next-step"><span class="label">Next step</span>Role-play the pushback · 5 min</div>
+          </div>
+          <p class="demo-note" style="color:var(--lab-dim)">Illustration of the conversation design, not live output.</p>
         </div>
         <div class="build-copy">
-          <span class="status live">● Live · built by me · Feb 2026</span>
-          <h3>MemoryCube</h3>
-          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
+          <span class="status">◐ In progress · built by me · Conversational AI</span>
+          <h3>Practice Coach</h3>
+          <p class="pitch">A conversational AI coach for the moments at work you want to handle better.</p>
+          <p class="extra">I was the first product manager at Ezra, a coaching marketplace. Practice Coach is that domain rebuilt AI-first: the coach is the conversation, not a scheduling layer around a human session.</p>
           <ol class="flow-steps">
-            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
-            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
-            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
+            <li><b>Pick a mode</b><span>Work coaching, or opt into Wellness</span></li>
+            <li><b>Talk it through</b><span>The coach asks before it advises, using coaching frameworks from published research</span></li>
+            <li><b>Leave with one step</b><span>Every session ends with something to practice</span></li>
           </ol>
-          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
-          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
-          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
-          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
+          <div class="evals">
+            <span class="label">What I'm evaluating</span>
+            <ul>
+              <li>Does it ask before it tells?</li>
+              <li>Does it hold context across a session?</li>
+              <li>Does it know when to point someone to a human?</li>
+            </ul>
+          </div>
+          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
+          <div class="tags"><span>Conversational AI</span><span>Conversation design</span><span>LLM coaching</span><span>Prompt design</span><span>Evals</span></div>
         </div>
       </article>
     </div>
@@ -520,22 +548,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
   <section class="lab band">
     <div class="wrap">
-      <article class="build small" id="coach">
+      <article class="build" id="memorycube">
         <div class="build-media">
-          <div class="screen" aria-hidden="true">
-            <div class="modes"><span class="on">Work</span><span>Wellness</span></div>
-            <div class="msgs" style="margin-top:12px">
-              <div class="msg cust">I froze in my 1:1 when my manager pushed back.</div>
-              <div class="msg bot">That happens. What did you want to say in that moment?</div>
-            </div>
-          </div>
+          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
         </div>
         <div class="build-copy">
-          <span class="status">◐ In progress · built by me</span>
-          <h3>Practice Coach</h3>
-          <p class="pitch">An AI coach grounded in published coaching research, with work and wellness modes.</p>
-          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
-          <div class="tags"><span>LLM coaching</span><span>Prompt design</span></div>
+          <span class="status live">● Live · built by me · Feb 2026</span>
+          <h3>MemoryCube</h3>
+          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
+          <ol class="flow-steps">
+            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
+            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
+            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
+          </ol>
+          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
+          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
+          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
+          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
         </div>
       </article>
     </div>
