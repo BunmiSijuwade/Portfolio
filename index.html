@@ -233,7 +233,7 @@ dl.pdt dd{margin:0;font-size:.97rem}
 
 /* builds */
 .lab{--lab-accent:#E38C99;--lab-text:color-mix(in srgb,var(--bg) 82%,var(--ink));--lab-dim:color-mix(in srgb,var(--bg) 58%,var(--ink));--lab-line:color-mix(in srgb,var(--bg) 16%,var(--ink))}
-.method{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-block:1px solid var(--lab-line);padding-block:18px;margin-bottom:8px}
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-block:1px solid var(--lab-line,var(--line));padding-block:18px;margin-bottom:8px}
 .method div{display:grid;gap:4px}
 .method b{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--lab-accent)}
 .method span{font-size:.95rem;color:var(--lab-text)}
@@ -276,6 +276,17 @@ dl.pdt dd{margin:0;font-size:.97rem}
 @media (max-width:760px){.method{grid-template-columns:1fr}}
 @media (max-width:460px){.thumbs{grid-template-columns:1fr}}
 
+/* interleaved bands */
+.band .wrap{padding-block:64px}
+.band .build{padding-block:0;border-bottom:0}
+.band-light{padding-block:64px}
+.band-light .case{border-top:0;padding-block:0}
+.band-light+.band-light{border-top:1px solid var(--line)}
+.work-intro{padding-bottom:40px}
+.work-intro .method{border-color:var(--line)}
+.work-intro .method b{color:var(--accent)}
+.work-intro .method span{color:var(--muted)}
+
 /* foundations */
 .found{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .found article{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
@@ -315,8 +326,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#top">Bunmi Sijuwade</a>
     <nav class="links" aria-label="Sections">
+      <a href="#work">Work</a>
       <a href="#mms">MatchMyStyle</a>
-      <a href="#ai">AI in production</a>
       <a href="#foundations">Platforms</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -333,7 +344,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="lede">13+ years of technical product leadership at Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. I've shipped AI into production commerce: computer vision, semantic search, unified customer profiles and personalization. Now I design, prototype and ship AI products myself.</p>
         <div class="cta">
           <a class="btn primary" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
-          <a class="btn" href="#lab">See what I build ↓</a>
+          <a class="btn" href="#work">See the work ↓</a>
         </div>
         <div class="meta"><span>Brooklyn, NY</span><span>MPS, NYU Tisch ITP</span><span>Certified Scrum Master</span></div>
       </div>
@@ -383,18 +394,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section class="lab" id="lab">
+  <section class="block work-intro" id="work">
     <div class="wrap">
       <div class="sec-head">
-        <div><p class="label">01 · AI I build</p><h2 style="margin-top:10px">Same product discipline. My own hands on the model.</h2></div>
-        <p>Working apps, live and public. I write the system prompts, evaluate model output, and stress-test the edge cases where models break.</p>
+        <div><p class="label">01 · Selected work</p><h2 style="margin-top:10px">AI I build myself, and AI I've shipped at scale.</h2></div>
+        <p>Dark bands are products I designed and built. Light bands are customer-facing AI I led at luxury and beauty brands.</p>
       </div>
       <div class="method">
         <div><b>Prompts</b><span>I write and version the system prompts myself.</span></div>
         <div><b>Evaluation</b><span>I test output against real inputs, not demo photos.</span></div>
         <div><b>Edge cases</b><span>I find where the model breaks before a user does.</span></div>
       </div>
-
+    </div>
+  </section>
+  <section class="lab band">
+    <div class="wrap">
       <article class="build" id="mms">
         <div class="build-media">
           <figure class="shot hero-shot"><img src="images/mms-analyzer.jpg" alt="MatchMyStyle analyzer naming an outfit's aesthetic, Gallery Hours, and listing five detected items with matches" loading="lazy"><figcaption>Analyzer</figcaption></figure>
@@ -404,7 +418,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </div>
         </div>
         <div class="build-copy">
-          <span class="status live">● Live</span>
+          <span class="status live">● Live · built by me</span>
           <h3>MatchMyStyle</h3>
           <p class="pitch">See a look online, shop it in your size.</p>
           <ol class="flow-steps">
@@ -418,80 +432,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <a class="btn" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
         </div>
       </article>
-
-      <article class="build flip" id="memorycube">
-        <div class="build-media">
-          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
-        </div>
-        <div class="build-copy">
-          <span class="status live">● Live · shipped Feb 2026</span>
-          <h3>MemoryCube</h3>
-          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
-          <ol class="flow-steps">
-            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
-            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
-            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
-          </ol>
-          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
-          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
-          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
-          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
-        </div>
-      </article>
-
-      <article class="build small" id="coach">
-        <div class="build-media">
-          <div class="screen" aria-hidden="true">
-            <div class="modes"><span class="on">Work</span><span>Wellness</span></div>
-            <div class="msgs" style="margin-top:12px">
-              <div class="msg cust">I froze in my 1:1 when my manager pushed back.</div>
-              <div class="msg bot">That happens. What did you want to say in that moment?</div>
-            </div>
-          </div>
-        </div>
-        <div class="build-copy">
-          <span class="status">◐ In progress</span>
-          <h3>Practice Coach</h3>
-          <p class="pitch">An AI coach grounded in published coaching research, with work and wellness modes.</p>
-          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
-          <div class="tags"><span>LLM coaching</span><span>Prompt design</span></div>
-        </div>
-      </article>
     </div>
   </section>
-
-  <section class="block" id="ai">
+  <section class="block band-light">
     <div class="wrap">
-      <div class="sec-head">
-        <div><p class="label">02 · AI in production</p><h2 style="margin-top:10px">Customer-facing AI, shipped at luxury brands.</h2></div>
-        <p>Each one paired a model with the operating model around it: who tunes it, what it's allowed to say, where a human takes over.</p>
-      </div>
-
-      <!-- XGen search -->
-      <article class="case" id="search">
-        <div>
-          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Global DTC</span></div>
-          <h3>AI search that knows what luxury shoppers mean</h3>
-          <div class="result"><div><b>−42%</b><span>zero-result searches</span></div><div><b>+28%</b><span>search conversion</span></div></div>
-          <dl class="pdt">
-            <div><dt>Problem</dt><dd>Native SFCC search returned nothing for misspellings, colloquial terms and exact product names. Shoppers hit dead ends.</dd></div>
-            <div><dt>Decision</dt><dd>Brought in XGen AI for intent-based search and made zero-result handling, synonyms and redirects launch requirements, not post-launch tuning.</dd></div>
-            <div><dt>Tradeoff</dt><dd>Algorithmic relevance vs. brand control. The model did the ranking; merchandisers kept boost, bury and pin controls.</dd></div>
-          </dl>
-          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
-        </div>
-        <div class="demo" aria-hidden="true">
-          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
-          <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
-          <div class="compare">
-            <div><p class="label">Before · native SFCC search</p><div class="zero">0 results<br>"No products found"</div></div>
-            <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
-          </div>
-          <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
-        </div>
-      </article>
-
-      <!-- Kiehl's -->
       <article class="case" id="skin">
         <div>
           <div class="case-top"><span class="lane">U.S. delivery lead</span><span class="label">Kiehl's · L'Oréal Luxe</span></div>
@@ -523,8 +467,33 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <p class="demo-note">Illustration of the journey, not real scan output.</p>
         </div>
       </article>
-
-      <!-- Kustomer -->
+    </div>
+  </section>
+  <section class="lab band">
+    <div class="wrap">
+      <article class="build" id="memorycube">
+        <div class="build-media">
+          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
+        </div>
+        <div class="build-copy">
+          <span class="status live">● Live · built by me · Feb 2026</span>
+          <h3>MemoryCube</h3>
+          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
+          <ol class="flow-steps">
+            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
+            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
+            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
+          </ol>
+          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
+          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
+          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
+          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="block band-light">
+    <div class="wrap">
       <article class="case" id="chat">
         <div>
           <div class="case-top"><span class="lane">Platform owner</span><span class="label">Alexander Wang · Customer care</span></div>
@@ -556,8 +525,58 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </div>
         </div>
       </article>
-
-      <!-- CDP + personalization -->
+    </div>
+  </section>
+  <section class="lab band">
+    <div class="wrap">
+      <article class="build small" id="coach">
+        <div class="build-media">
+          <div class="screen" aria-hidden="true">
+            <div class="modes"><span class="on">Work</span><span>Wellness</span></div>
+            <div class="msgs" style="margin-top:12px">
+              <div class="msg cust">I froze in my 1:1 when my manager pushed back.</div>
+              <div class="msg bot">That happens. What did you want to say in that moment?</div>
+            </div>
+          </div>
+        </div>
+        <div class="build-copy">
+          <span class="status">◐ In progress · built by me</span>
+          <h3>Practice Coach</h3>
+          <p class="pitch">An AI coach grounded in published coaching research, with work and wellness modes.</p>
+          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
+          <div class="tags"><span>LLM coaching</span><span>Prompt design</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="block" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">02 · More shipped work</p><h2 style="margin-top:10px">Search and customer data at Alexander Wang.</h2></div>
+        <p>Each one paired a model with the operating model around it: who tunes it, what it's allowed to say, where a human takes over.</p>
+      </div>
+      <article class="case" id="search">
+        <div>
+          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Global DTC</span></div>
+          <h3>AI search that knows what luxury shoppers mean</h3>
+          <div class="result"><div><b>−42%</b><span>zero-result searches</span></div><div><b>+28%</b><span>search conversion</span></div></div>
+          <dl class="pdt">
+            <div><dt>Problem</dt><dd>Native SFCC search returned nothing for misspellings, colloquial terms and exact product names. Shoppers hit dead ends.</dd></div>
+            <div><dt>Decision</dt><dd>Brought in XGen AI for intent-based search and made zero-result handling, synonyms and redirects launch requirements, not post-launch tuning.</dd></div>
+            <div><dt>Tradeoff</dt><dd>Algorithmic relevance vs. brand control. The model did the ranking; merchandisers kept boost, bury and pin controls.</dd></div>
+          </dl>
+          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
+          <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
+          <div class="compare">
+            <div><p class="label">Before · native SFCC search</p><div class="zero">0 results<br>"No products found"</div></div>
+            <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
+        </div>
+      </article>
       <article class="case" id="cdp">
         <div>
           <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Omnichannel</span></div>
