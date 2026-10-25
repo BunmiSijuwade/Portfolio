@@ -436,6 +436,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
   <section class="block band-light">
     <div class="wrap">
+      <article class="case" id="search">
+        <div>
+          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Global DTC</span></div>
+          <h3>AI search that knows what luxury shoppers mean</h3>
+          <div class="result"><div><b>−42%</b><span>zero-result searches</span></div><div><b>+28%</b><span>search conversion</span></div></div>
+          <dl class="pdt">
+            <div><dt>Problem</dt><dd>Native SFCC search returned nothing for misspellings, colloquial terms and exact product names. Shoppers hit dead ends.</dd></div>
+            <div><dt>Decision</dt><dd>Brought in XGen AI for intent-based search and made zero-result handling, synonyms and redirects launch requirements, not post-launch tuning.</dd></div>
+            <div><dt>Tradeoff</dt><dd>Algorithmic relevance vs. brand control. The model did the ranking; merchandisers kept boost, bury and pin controls.</dd></div>
+          </dl>
+          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
+          <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
+          <div class="compare">
+            <div><p class="label">Before · native SFCC search</p><div class="zero">0 results<br>"No products found"</div></div>
+            <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="lab band">
+    <div class="wrap">
+      <article class="build" id="memorycube">
+        <div class="build-media">
+          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
+        </div>
+        <div class="build-copy">
+          <span class="status live">● Live · built by me · Feb 2026</span>
+          <h3>MemoryCube</h3>
+          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
+          <ol class="flow-steps">
+            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
+            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
+            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
+          </ol>
+          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
+          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
+          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
+          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="block band-light">
+    <div class="wrap">
       <article class="case" id="skin">
         <div>
           <div class="case-top"><span class="lane">U.S. delivery lead</span><span class="label">Kiehl's · L'Oréal Luxe</span></div>
@@ -471,64 +520,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
   <section class="lab band">
     <div class="wrap">
-      <article class="build" id="memorycube">
-        <div class="build-media">
-          <figure class="shot hero-shot"><img src="images/memorycube-home.jpg" alt="MemoryCube home page: a 3D cube with photo tiles for places like Paris and Tokyo, under the headline Explore your life in 3D" loading="lazy"><figcaption>Home</figcaption></figure>
-        </div>
-        <div class="build-copy">
-          <span class="status live">● Live · built by me · Feb 2026</span>
-          <h3>MemoryCube</h3>
-          <p class="pitch">Every place you've lived, eaten, loved, or been, as a 3D cube.</p>
-          <ol class="flow-steps">
-            <li><b>Add photos</b><span>Upload to the faces of your cube</span></li>
-            <li><b>Claude writes it</b><span>Turns the photos into a short story of the memory</span></li>
-            <li><b>Rotate &amp; share</b><span>3D in the browser, public link, no login to view</span></li>
-          </ol>
-          <p class="extra">Started as my 2011 NYU Tisch ITP thesis. I rebuilt and shipped it in 2026.</p>
-          <p class="decision"><span>Product call</span>Creators sign in with Google so cubes persist. Viewers never need an account.</p>
-          <div class="tags"><span>Claude API</span><span>React</span><span>Three.js</span><span>Supabase</span></div>
-          <a class="btn" href="https://memorycube.lovable.app" target="_blank" rel="noopener">Try MemoryCube ↗</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="block band-light">
-    <div class="wrap">
-      <article class="case" id="chat">
-        <div>
-          <div class="case-top"><span class="lane">Platform owner</span><span class="label">Alexander Wang · Customer care</span></div>
-          <h3>Service chat that hands off with the full story</h3>
-          <dl class="pdt" style="margin-top:6px">
-            <div><dt>Problem</dt><dd>High-value clients asking about orders, returns or a VIP appointment shouldn't repeat themselves, and agents shouldn't hunt across systems.</dd></div>
-            <div><dt>What I did</dt><dd>Managed the Kustomer platform behind site chat: automated answers for tier-1 intents (order status, shipping, returns) and routing to care agents for everything else.</dd></div>
-            <div><dt>Data layer</dt><dd>Wired customer context into the agent view, so order history from SFCC, store purchases from Teamwork and VIP tier show up the moment a chat lands.</dd></div>
-          </dl>
-          <div class="tags"><span>Kustomer</span><span>Chat routing</span><span>Human handoff</span><span>SFCC</span><span>Teamwork</span></div>
-        </div>
-        <div class="demo" aria-hidden="true">
-          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">site chat · agent view</span></div>
-          <div class="chat">
-            <div class="msgs">
-              <div class="msg cust">Where's my order? It was a gift</div>
-              <div class="msg bot">Order #AW-48213 shipped Tuesday and arrives Friday. Track it here →</div>
-              <div class="msg cust">Can I change the gift note?</div>
-              <div class="msg sys">→ routed to client care</div>
-              <div class="msg agent">Hi, this is Maya. I can see the order. What should the note say?</div>
-            </div>
-            <div class="ctx">
-              <p class="label">Agent sees</p>
-              <div><span>Tier</span><b>VIP</b></div>
-              <div><span>Orders</span><b>14</b></div>
-              <div><span>Last store</span><b>SoHo</b></div>
-              <div><span>Open order</span><b>In transit</b></div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="lab band">
-    <div class="wrap">
       <article class="build small" id="coach">
         <div class="build-media">
           <div class="screen" aria-hidden="true">
@@ -549,34 +540,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </article>
     </div>
   </section>
-  <section class="block" id="ai">
+  <section class="block band-light">
     <div class="wrap">
-      <div class="sec-head">
-        <div><p class="label">02 · More shipped work</p><h2 style="margin-top:10px">Search and customer data at Alexander Wang.</h2></div>
-        <p>Each one paired a model with the operating model around it: who tunes it, what it's allowed to say, where a human takes over.</p>
-      </div>
-      <article class="case" id="search">
-        <div>
-          <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Global DTC</span></div>
-          <h3>AI search that knows what luxury shoppers mean</h3>
-          <div class="result"><div><b>−42%</b><span>zero-result searches</span></div><div><b>+28%</b><span>search conversion</span></div></div>
-          <dl class="pdt">
-            <div><dt>Problem</dt><dd>Native SFCC search returned nothing for misspellings, colloquial terms and exact product names. Shoppers hit dead ends.</dd></div>
-            <div><dt>Decision</dt><dd>Brought in XGen AI for intent-based search and made zero-result handling, synonyms and redirects launch requirements, not post-launch tuning.</dd></div>
-            <div><dt>Tradeoff</dt><dd>Algorithmic relevance vs. brand control. The model did the ranking; merchandisers kept boost, bury and pin controls.</dd></div>
-          </dl>
-          <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
-        </div>
-        <div class="demo" aria-hidden="true">
-          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
-          <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
-          <div class="compare">
-            <div><p class="label">Before · native SFCC search</p><div class="zero">0 results<br>"No products found"</div></div>
-            <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
-          </div>
-          <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
-        </div>
-      </article>
       <article class="case" id="cdp">
         <div>
           <div class="case-top"><span class="lane">Product lead</span><span class="label">Alexander Wang · Omnichannel</span></div>
@@ -612,6 +577,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <b>transport</b>   S3 snapshot · user data feed
 <b>key</b>         hashed email (first attribute)
 <b>segments</b>    VIP · new · at-risk · lapsed</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="block" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">02 · More shipped work</p><h2 style="margin-top:10px">Customer care at Alexander Wang.</h2></div>
+        <p>Pairing automation with the operating model around it: what it answers on its own, and where a human takes over.</p>
+      </div>
+      <article class="case" id="chat">
+        <div>
+          <div class="case-top"><span class="lane">Platform owner</span><span class="label">Alexander Wang · Customer care</span></div>
+          <h3>Service chat that hands off with the full story</h3>
+          <dl class="pdt" style="margin-top:6px">
+            <div><dt>Problem</dt><dd>High-value clients asking about orders, returns or a VIP appointment shouldn't repeat themselves, and agents shouldn't hunt across systems.</dd></div>
+            <div><dt>What I did</dt><dd>Managed the Kustomer platform behind site chat: automated answers for tier-1 intents (order status, shipping, returns) and routing to care agents for everything else.</dd></div>
+            <div><dt>Data layer</dt><dd>Wired customer context into the agent view, so order history from SFCC, store purchases from Teamwork and VIP tier show up the moment a chat lands.</dd></div>
+          </dl>
+          <div class="tags"><span>Kustomer</span><span>Chat routing</span><span>Human handoff</span><span>SFCC</span><span>Teamwork</span></div>
+        </div>
+        <div class="demo" aria-hidden="true">
+          <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">site chat · agent view</span></div>
+          <div class="chat">
+            <div class="msgs">
+              <div class="msg cust">Where's my order? It was a gift</div>
+              <div class="msg bot">Order #AW-48213 shipped Tuesday and arrives Friday. Track it here →</div>
+              <div class="msg cust">Can I change the gift note?</div>
+              <div class="msg sys">→ routed to client care</div>
+              <div class="msg agent">Hi, this is Maya. I can see the order. What should the note say?</div>
+            </div>
+            <div class="ctx">
+              <p class="label">Agent sees</p>
+              <div><span>Tier</span><b>VIP</b></div>
+              <div><span>Orders</span><b>14</b></div>
+              <div><span>Last store</span><b>SoHo</b></div>
+              <div><span>Open order</span><b>In transit</b></div>
+            </div>
+          </div>
         </div>
       </article>
     </div>
