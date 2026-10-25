@@ -119,7 +119,7 @@ section.block{padding-block:72px 24px}
 /* case */
 .case{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-block:40px;border-top:1px solid var(--line)}
 .case>*{min-width:0}
-.case:nth-of-type(even) .demo{order:-1}
+.case:nth-of-type(even) .demo-col{order:-1}
 .case-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:12px}
 .lane{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
 .case h3{margin-bottom:14px}
@@ -132,7 +132,7 @@ dl.pdt dt{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;lette
 dl.pdt dd{margin:0;font-size:.97rem}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
 .tags span{font-family:var(--mono);font-size:.7rem;padding:4px 8px;border-radius:6px;background:var(--sunk);color:var(--muted)}
-@media (max-width:900px){.case{grid-template-columns:1fr;gap:24px}.case:nth-of-type(even) .demo{order:0}}
+@media (max-width:900px){.case{grid-template-columns:1fr;gap:24px}.case:nth-of-type(even) .demo-col{order:0}}
 @media (max-width:460px){dl.pdt div{grid-template-columns:1fr;gap:2px}}
 
 /* demo frames */
@@ -298,6 +298,13 @@ dl.pdt dd{margin:0;font-size:.97rem}
 .evals li::before{content:"?";position:absolute;left:0;top:0;font-family:var(--mono);font-size:.78rem;color:var(--lab-accent)}
 .evals .label{color:var(--lab-dim)}
 
+/* brand marks */
+.demo-col{display:grid;gap:14px;align-self:start;min-width:0}
+.brand-mark{display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.brand-mark span{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1}
+.brand-mark small{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.case-top .label{color:var(--ink);font-weight:500}
+
 /* foundations */
 .found{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .found article{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
@@ -459,7 +466,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </dl>
           <div class="tags"><span>XGen AI</span><span>SFCC</span><span>Merchandising</span><span>Search analytics</span></div>
         </div>
-        <div class="demo" aria-hidden="true">
+        <div class="demo-col">
+          <div class="brand-mark"><span>Alexander Wang</span><small>Global DTC · Product lead</small></div>
+          <div class="demo" aria-hidden="true">
           <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">search · before / after</span></div>
           <div class="sbox"><span style="color:var(--muted)">⌕</span><span>blak leather mini bag</span><span class="caret"></span></div>
           <div class="compare">
@@ -467,6 +476,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div class="after"><p class="label" style="color:var(--ai)">After · XGen AI intent search</p><p>“black” · “leather” · “mini bag”</p><div class="mini-grid"><i></i><i></i><i></i></div></div>
           </div>
           <div class="rules"><span>synonym: tote ↔ shopper</span><span>redirect: “sale” → /vault</span><span>pin: new season</span></div>
+        </div>
         </div>
       </article>
     </div>
@@ -525,7 +535,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </dl>
           <div class="tags"><span>ModiFace</span><span>SFCC</span><span>Salsify PIM</span><span>OpenText DAM</span><span>Legal review</span></div>
         </div>
-        <div class="demo" aria-hidden="true">
+        <div class="demo-col">
+          <div class="brand-mark"><span>Kiehl's</span><small>L'Oréal Luxe · U.S. delivery lead</small></div>
+          <div class="demo" aria-hidden="true">
           <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">scan → concern → routine</span></div>
           <div class="skin">
             <div class="face"><i style="top:30%;left:22%"></i><i style="top:52%;left:62%"></i><i style="top:18%;left:52%"></i></div>
@@ -542,6 +554,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div><b>PM · step 3</b>Moisturizer</div>
           </div>
           <p class="demo-note">Illustration of the journey, not real scan output.</p>
+        </div>
         </div>
       </article>
     </div>
@@ -583,7 +596,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </dl>
           <div class="tags"><span>ActionIQ CDP</span><span>Dynamic Yield</span><span>Teamwork POS</span><span>Okta</span><span>Cuseum</span><span>Attentive</span></div>
         </div>
-        <div class="demo" aria-hidden="true">
+        <div class="demo-col">
+          <div class="brand-mark"><span>Alexander Wang</span><small>Omnichannel · Product lead</small></div>
+          <div class="demo" aria-hidden="true">
           <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">unified commerce data flow</span></div>
           <div class="cdp">
             <div class="col">
@@ -607,6 +622,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <b>key</b>         hashed email (first attribute)
 <b>segments</b>    VIP · new · at-risk · lapsed</div>
         </div>
+        </div>
       </article>
     </div>
   </section>
@@ -627,7 +643,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </dl>
           <div class="tags"><span>Kustomer</span><span>Chat routing</span><span>Human handoff</span><span>SFCC</span><span>Teamwork</span></div>
         </div>
-        <div class="demo" aria-hidden="true">
+        <div class="demo-col">
+          <div class="brand-mark"><span>Alexander Wang</span><small>Customer care · Platform owner</small></div>
+          <div class="demo" aria-hidden="true">
           <div class="demo-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">site chat · agent view</span></div>
           <div class="chat">
             <div class="msgs">
@@ -645,6 +663,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
               <div><span>Open order</span><b>In transit</b></div>
             </div>
           </div>
+        </div>
         </div>
       </article>
     </div>
