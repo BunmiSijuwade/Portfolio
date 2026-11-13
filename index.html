@@ -7,7 +7,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bunmi-portfolio.vercel.app/">
 <meta property="og:title" content="Bunmi Sijuwade | Product Leader, Digital Commerce &amp; AI">
-<meta property="og:description" content="AI search, AI skin diagnostics, customer data and personalization for luxury and beauty brands. Plus AI products I build myself, like MatchMyStyle.">
+<meta property="og:description" content="AI search, AI skin diagnostics, customer data and personalization for luxury and beauty brands. Plus AI products I build myself, like MatchMyStyle and the NodSay apps.">
 <meta property="og:image" content="https://bunmi-portfolio.vercel.app/og.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1255">
@@ -26,7 +26,8 @@ img{max-width:100%}
   --accent:#8A1C2E; --accent-soft:#F4E3E5; --ai:#8A1C2E; --ai-soft:#F4E3E5; --good:#2F7A3E;
   --display:"Young Serif",Georgia,"Times New Roman",serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --mono:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --code:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121212; --surface:#1C1C1C; --sunk:#262626; --ink:#EDEDEA; --muted:#A2A29C; --line:#333331;
@@ -46,7 +47,7 @@ h1{font-size:clamp(2.3rem,5.2vw,4rem);letter-spacing:-.01em}
 h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
 h3{font-size:1.5rem}
 p{margin:0}
-.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.label{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 .mono{font-family:var(--mono)}
 
 /* nav */
@@ -143,7 +144,7 @@ dl.pdt dd{margin:0;font-size:.97rem}
 .demo-note{font-size:.75rem;color:var(--muted);margin-top:12px;font-style:italic}
 
 /* search demo */
-.sbox{display:flex;align-items:center;gap:10px;border:1px solid var(--ink);border-radius:10px;padding:10px 12px;font-family:var(--mono);font-size:.9rem}
+.sbox{display:flex;align-items:center;gap:10px;border:1px solid var(--ink);border-radius:10px;padding:10px 12px;font-family:var(--code);font-size:.9rem}
 .caret{width:1px;height:18px;background:var(--ink);animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
@@ -194,7 +195,7 @@ dl.pdt dd{margin:0;font-size:.97rem}
 .hub{background:var(--ink);color:var(--bg);border-radius:14px;padding:16px 14px;text-align:center;font-weight:600;font-size:.88rem;min-width:110px}
 .hub small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;opacity:.85;margin-top:4px}
 .arrow{font-family:var(--mono);color:var(--muted);text-align:center;font-size:.8rem}
-.contract{margin-top:14px;font-family:var(--mono);font-size:.72rem;background:var(--sunk);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre;line-height:1.55;color:var(--muted)}
+.contract{margin-top:14px;font-family:var(--code);font-size:.72rem;background:var(--sunk);border-radius:10px;padding:12px;overflow-x:auto;white-space:pre;line-height:1.55;color:var(--muted)}
 .contract b{color:var(--ink);font-weight:500}
 @media (max-width:560px){.cdp{grid-template-columns:1fr}.hub{order:-1}.arrow{display:none}}
 
@@ -337,6 +338,41 @@ dl.pdt dd{margin:0;font-size:.97rem}
 footer{border-top:1px solid var(--line);padding-block:24px;font-size:.82rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
+<style>
+.ns-head{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end;margin-bottom:32px}
+.ns-title{font-family:var(--display);font-size:56px;line-height:1;margin:10px 0 12px;color:#fff;font-weight:400}
+.ns-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ns-card{background:#fff;color:#141414;border-radius:14px;overflow:hidden;border-top:8px solid var(--c);display:flex;flex-direction:column}
+.ns-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:1px solid #e3e3df}
+.ns-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.ns-eyebrow{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#5e5e5a}
+.ns-card h4{font-family:var(--display);font-weight:400;font-size:26px;margin:6px 0 6px}
+.ns-card p{margin:0 0 10px;color:#3a3a37}
+.ns-card ul{margin:0 0 12px;padding-left:18px;color:#3a3a37;font-size:14.5px}
+.ns-card li{margin:3px 0}
+.ns-call{font-size:14px;border-left:3px solid var(--c);padding-left:10px;margin-top:auto!important}
+.ns-call b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:#5e5e5a}
+.ns-link{margin-top:14px;align-self:flex-start;border:1.5px solid #141414;border-radius:999px;padding:8px 16px;color:#141414;text-decoration:none;font-weight:600;font-size:14px}
+</style>
+<style>
+.live{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.live-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.live-count{font-family:var(--display);font-size:28px;line-height:1;color:var(--accent)}
+.live-row{display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:center;padding:10px;border-radius:12px;text-decoration:none;color:inherit;border-left:4px solid var(--c);margin-top:8px;background:var(--bg)}
+.live-row:hover{background:var(--sunk)}
+.live-row img{width:96px;height:60px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--line)}
+.live-row b{display:block;font-weight:700}
+.live-row i{display:block;font-style:normal;color:var(--muted);font-size:14px;line-height:1.35}
+.live-row em{font-style:normal;color:var(--muted)}
+</style>
+<style>
+.otw{color:var(--good)}
+.stack-row{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;margin-bottom:40px}
+.stack-h{font-family:var(--display);font-weight:400;font-size:2.2rem;line-height:1.1;margin:10px 0 12px}
+.stack-intro p:last-child{color:var(--muted)}
+@media (max-width:900px){.stack-row,.ns-head{grid-template-columns:1fr;gap:20px}.ns-grid{grid-template-columns:1fr}.stack-row{margin-top:40px}}
+@media (max-width:560px){.live-row{grid-template-columns:72px 1fr auto}.live-row img{width:72px;height:46px}.ns-title{font-size:44px}}
+</style>
 </head>
 <body>
 
@@ -345,6 +381,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a class="brand" href="#top">Bunmi Sijuwade</a>
     <nav class="links" aria-label="Sections">
       <a href="#work">Work</a>
+      <a href="#nodsay">NodSay</a>
       <a href="#mms">MatchMyStyle</a>
       <a href="#foundations">Platforms</a>
       <a href="#contact">Contact</a>
@@ -357,41 +394,58 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="label">Product leader · Intelligent applications · Applied AI</p>
+        <p class="label">Product leader · Applied AI · <span class="otw">● Open to work</span></p>
         <h1 style="margin-top:14px">I build AI products people love to use, <em>and the data infrastructure that powers them.</em></h1>
-        <p class="lede">13+ years of technical product leadership at Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. I've shipped AI into production commerce: computer vision, semantic search, unified customer profiles and personalization. Now I design, prototype and ship AI products myself.</p>
+        <p class="lede">13+ years of technical product leadership at Alexander Wang, Kiehl's, Estée Lauder and Ezra Coaching. I've shipped AI into production commerce: computer vision, semantic search, unified customer profiles and personalization. Now I design, build and ship AI products myself. Five are live.</p>
         <div class="cta">
-          <a class="btn primary" href="https://matchmystyle.lovable.app" target="_blank" rel="noopener">Try MatchMyStyle ↗</a>
-          <a class="btn" href="#work">See the work ↓</a>
+          <a class="btn primary" href="#work">See the work ↓</a>
+          <a class="btn" href="#contact">Get in touch</a>
         </div>
         <div class="meta"><span>Brooklyn, NY</span><span>MPS, NYU Tisch ITP</span><span>Certified Scrum Master</span></div>
       </div>
 
-      <div class="stack" aria-label="Where each project sits in the commerce stack">
-        <div class="stack-head"><span class="label">The stack I've shipped into</span></div>
-        <div class="layer"><span class="label">Applied AI</span>
-          <div class="chips">
-            <a class="chip ai" href="#mms">MatchMyStyle</a>
-            <a class="chip ai" href="#search">AI search</a>
-            <a class="chip ai" href="#skin">Skin reader</a>
-            <a class="chip ai" href="#chat">Service chat</a>
-            <a class="chip ai" href="#memorycube">MemoryCube</a>
-            <a class="chip ai" href="#coach">Practice Coach</a>
-          </div></div>
-        <div class="flow"></div>
-        <div class="layer"><span class="label">Decisioning</span>
-          <div class="chips"><a class="chip" href="#cdp">Dynamic Yield personalization</a><a class="chip" href="#cdp">Attentive SMS</a></div></div>
-        <div class="flow"></div>
-        <div class="layer"><span class="label">Customer data</span>
-          <div class="chips"><a class="chip data" href="#cdp">ActionIQ CDP</a><a class="chip data" href="#cdp">VIP loyalty</a><a class="chip" href="#skin">Salsify PIM · DAM</a></div></div>
-        <div class="flow"></div>
-        <div class="layer"><span class="label">Commerce core</span>
-          <div class="chips"><span class="chip">SFCC</span><span class="chip">Teamwork POS/OMS</span><span class="chip">ESW</span><span class="chip">Okta</span></div></div>
-        <p class="stack-foot">AI features are only as good as the profile and catalog under them. I've owned work at every layer.</p>
+      <div class="live" aria-label="Live AI products I built">
+        <div class="live-head"><span class="label">Live now · built by me</span><span class="live-count">5</span></div>
+        <a class="live-row" target="_blank" rel="noopener" href="https://nodsay-next-stop-nyc.lovable.app" style="--c:#C2410C"><img src="images/nodsay-nextstop.jpg" alt=""><span><b>NodSay Next Stop</b><i>Free and NYC-paid job training, in one place</i></span><em>↗</em></a>
+        <a class="live-row" target="_blank" rel="noopener" href="https://shift.nodsaycoach.com" style="--c:#F2B705"><img src="images/nodsay-shift.jpg" alt=""><span><b>NodSay Shift</b><i>Free AI job coach for frontline workers</i></span><em>↗</em></a>
+        <a class="live-row" target="_blank" rel="noopener" href="https://nodsaycoach.com" style="--c:#5B4BD6"><img src="images/nodsay-coach.jpg" alt=""><span><b>NodSay Coach</b><i>Workplace and wellness coaching, checked against experts</i></span><em>↗</em></a>
+        <a class="live-row" target="_blank" rel="noopener" href="https://matchmystyle.lovable.app" style="--c:#8A1C2E"><img src="images/mms-home.jpg" alt=""><span><b>MatchMyStyle</b><i>See a look online, shop it in your size</i></span><em>↗</em></a>
+        <a class="live-row" target="_blank" rel="noopener" href="https://memorycube.lovable.app" style="--c:#2F7A3E"><img src="images/memorycube-home.jpg" alt=""><span><b>MemoryCube</b><i>Places and photos become a 3D story</i></span><em>↗</em></a>
       </div>
     </div>
 
     <div class="wrap">
+      <div class="stack-row">
+        <div class="stack-intro">
+          <p class="label">How the work fits together</p>
+          <h2 class="stack-h">AI on top, data underneath.</h2>
+          <p>Each project is placed on one stack, from the AI people use down to the commerce systems under it.</p>
+        </div>
+        <div class="stack" aria-label="Where each project sits in the commerce stack">
+          <div class="stack-head"><span class="label">The stack I've shipped into</span></div>
+          <div class="layer"><span class="label">Applied AI</span>
+            <div class="chips">
+              <a class="chip ai" href="#mms">MatchMyStyle</a>
+              <a class="chip ai" href="#search">AI search</a>
+              <a class="chip ai" href="#skin">Skin reader</a>
+              <a class="chip ai" href="#chat">Service chat</a>
+              <a class="chip ai" href="#memorycube">MemoryCube</a>
+              <a class="chip ai" href="#nodsay">NodSay Next Stop</a>
+              <a class="chip ai" href="#nodsay">NodSay Shift</a>
+              <a class="chip ai" href="#nodsay">NodSay Coach</a>
+            </div></div>
+          <div class="flow"></div>
+          <div class="layer"><span class="label">Decisioning</span>
+            <div class="chips"><a class="chip" href="#cdp">Dynamic Yield personalization</a><a class="chip" href="#cdp">Attentive SMS</a></div></div>
+          <div class="flow"></div>
+          <div class="layer"><span class="label">Customer data</span>
+            <div class="chips"><a class="chip data" href="#cdp">ActionIQ CDP</a><a class="chip data" href="#cdp">VIP loyalty</a><a class="chip" href="#skin">Salsify PIM · DAM</a></div></div>
+          <div class="flow"></div>
+          <div class="layer"><span class="label">Commerce core</span>
+            <div class="chips"><span class="chip">SFCC</span><span class="chip">Teamwork POS/OMS</span><span class="chip">ESW</span><span class="chip">Okta</span></div></div>
+          <p class="stack-foot">AI features are only as good as the profile and catalog under them. I've owned work at every layer.</p>
+        </div>
+      </div>
       <div class="proof">
         <div><b>−42%</b><span>zero-result searches</span><small>Alexander Wang</small></div>
         <div><b>+32%</b><span>CVR on AI skin journey</span><small>Kiehl's U.S.</small></div>
@@ -406,7 +460,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <li><span class="yr">2018–2020</span><b>L'Oréal / Kiehl's</b><span class="role">Global Digital DTC PM · U.S. lead, AI skin diagnostics · PIM/DAM</span></li>
           <li><span class="yr">2021–2022</span><b>Ezra Coaching</b><span class="role">Lead Technical PM · first PM, 3-app B2B SaaS</span></li>
           <li><span class="yr">2022–2025</span><b>Alexander Wang</b><span class="role">Lead PM, Global DTC & Omnichannel · AI search, CDP, loyalty</span></li>
-          <li class="now"><span class="yr">Now</span><b>Building AI products</b><span class="role">MatchMyStyle on Gemini · MemoryCube on Claude · Practice Coach in progress</span></li>
+          <li class="now"><span class="yr">Now</span><b>Building AI products</b><span class="role">NodSay: Next Stop, Shift and Coach · MatchMyStyle on Gemini · MemoryCube on Claude</span></li>
         </ol>
       </div>
     </div>
@@ -481,43 +535,51 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </article>
     </div>
   </section>
-  <section class="lab band">
+  <section class="lab band" id="nodsay">
     <div class="wrap">
-      <article class="build" id="coach">
-        <div class="build-media">
-          <div class="screen coach-screen" aria-hidden="true">
-            <div class="coach-top"><div class="modes"><span class="on">Work</span><span>Wellness</span></div><span class="label">Session 3</span></div>
-            <div class="msgs">
-              <div class="msg cust">I froze in my 1:1 when my manager pushed back on my roadmap.</div>
-              <div class="msg bot">That's a hard moment. What did you want to say right then?</div>
-              <div class="msg cust">That the dates were based on eng estimates, not a guess.</div>
-              <div class="msg bot">Good, that's your anchor. Want to practice saying it out loud? I'll play your manager.</div>
-            </div>
-            <div class="next-step"><span class="label">Next step</span>Role-play the pushback · 5 min</div>
-          </div>
-          <p class="demo-note" style="color:var(--lab-dim)">Illustration of the conversation design, not live output.</p>
+      <div class="ns-head">
+        <div>
+          <span class="status">● Live · built by me · Solo AI lab</span>
+          <h3 class="ns-title">NodSay</h3>
+          <p class="pitch">Three AI apps that help people take their next step at work. Coaching, job practice, and a guide to free training in NYC.</p>
         </div>
-        <div class="build-copy">
-          <span class="status">◐ In progress · built by me · Conversational AI</span>
-          <h3>Practice Coach</h3>
-          <p class="pitch">A conversational AI coach for the moments at work you want to handle better.</p>
-          <ol class="flow-steps">
-            <li><b>Pick a mode</b><span>Work coaching, or opt into Wellness</span></li>
-            <li><b>Talk it through</b><span>The coach asks before it advises, using coaching frameworks from published research</span></li>
-            <li><b>Leave with one step</b><span>Every session ends with something to practice</span></li>
-          </ol>
-          <div class="evals">
-            <span class="label">What I'm evaluating</span>
-            <ul>
-              <li>Does it ask before it tells?</li>
-              <li>Does it hold context across a session?</li>
-              <li>Does it know when to point someone to a human?</li>
-            </ul>
+        <p class="decision"><span>Product call</span>Same family, different jobs. Each app shares one design system and its own accent, so they read as one lab, not three side projects.</p>
+      </div>
+      <div class="ns-grid">
+        <article class="ns-card" style="--c:#C2410C">
+          <img src="images/nodsay-nextstop.jpg" alt="NodSay Next Stop homepage">
+          <div class="ns-body">
+            <span class="ns-eyebrow">Live · Built for SheBuilds</span>
+            <h4>NodSay Next Stop</h4>
+            <p>Find free and NYC-paid job training in one place.</p>
+            <ul><li>54 free programs, hand-checked</li><li>City voucher courses, live from NYC Open Data, on a map</li><li>Ask in your own words</li></ul>
+            <p class="ns-call"><b>Product call</b>The AI only picks topics and program IDs. Every name and link on screen comes from checked data, so it can't invent a program.</p>
+            <a class="ns-link" href="https://nodsay-next-stop-nyc.lovable.app">Try Next Stop ↗</a>
           </div>
-          <p class="decision"><span>Product call</span>Work coaching stands on its own. Wellness is opt-in, for people who want support beyond the job.</p>
-          <div class="tags"><span>Conversational AI</span><span>Conversation design</span><span>LLM coaching</span><span>Prompt design</span><span>Evals</span></div>
-        </div>
-      </article>
+        </article>
+        <article class="ns-card" style="--c:#F2B705">
+          <img src="images/nodsay-shift.jpg" alt="NodSay Shift homepage">
+          <div class="ns-body">
+            <span class="ns-eyebrow">Live · Beta</span>
+            <h4>NodSay Shift</h4>
+            <p>A free AI job coach for NYC retail, restaurant, hotel and warehouse workers.</p>
+            <ul><li>Practice real tasks from the job you want next</li><li>Feedback: what was strong, one thing to tighten, a stronger version</li><li>Work samples saved to a portfolio</li></ul>
+            <p class="ns-call"><b>Product call</b>Practice uses a made-up store. Never free work for a real company.</p>
+            <a class="ns-link" href="https://shift.nodsaycoach.com">Try Shift ↗</a>
+          </div>
+        </article>
+        <article class="ns-card" style="--c:#5B4BD6">
+          <img src="images/nodsay-coach.jpg" alt="NodSay Coach homepage">
+          <div class="ns-body">
+            <span class="ns-eyebrow">Live · Grew out of Practice Coach</span>
+            <h4>NodSay Coach</h4>
+            <p>AI coaching for workplace and wellness, one change at a time.</p>
+            <ul><li>A separate AI grader agrees with expert ratings on 133 coaching sessions (kappa 0.63 to 0.69)</li><li>A safety check reads every message</li><li>24 simulated people test every change</li></ul>
+            <p class="ns-call"><b>Product call</b>Every session ends with one small change, not a plan.</p>
+            <a class="ns-link" href="https://nodsaycoach.com">Try Coach ↗</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
   <section class="block band-light">
