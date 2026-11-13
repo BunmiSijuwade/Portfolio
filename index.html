@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Bunmi Sijuwade: product leader in digital commerce and AI. AI search, AI skin diagnostics, customer data and personalization at Alexander Wang and Kiehl's, plus AI products I build myself.">
 <meta property="og:type" content="website">
@@ -26,15 +27,11 @@ img{max-width:100%}
   --accent:#8A1C2E; --accent-soft:#F4E3E5; --ai:#8A1C2E; --ai-soft:#F4E3E5; --good:#2F7A3E;
   --display:"Young Serif",Georgia,"Times New Roman",serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
   --mono:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --code:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#121212; --surface:#1C1C1C; --sunk:#262626; --ink:#EDEDEA; --muted:#A2A29C; --line:#333331;
-  --accent:#E38C99; --accent-soft:#3A1F24; --ai:#E38C99; --ai-soft:#3A1F24; --good:#7CCB8A; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#121212; --surface:#1C1C1C; --sunk:#262626; --ink:#EDEDEA; --muted:#A2A29C; --line:#333331;
-  --accent:#E38C99; --accent-soft:#3A1F24; --ai:#E38C99; --ai-soft:#3A1F24; --good:#7CCB8A; color-scheme:dark}
+/* Light only: the dark bands mean "built by me", so the page keeps one look on every device. */
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
